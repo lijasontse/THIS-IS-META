@@ -1,0 +1,21 @@
+{
+  "name": "THIS-IS-META",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --watch --mode=development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.35.1",
+    "webpack-cli": "^4.6.0"
+  },
+  "devDependencies": {}
+}
