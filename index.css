@@ -1,0 +1,115 @@
+.wrapper {
+  min-width: 1200px;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(7, 16, 18);
+  color: #fff;
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(4, 2, 2);
+  text-shadow: 0px 0px 20px #646464;
+  align-items: center;
+
+}
+
+.header-title {
+  width: 100%;
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.header-about-me {
+  color: #969696;
+  display: flex;
+  font-size: 24px;
+  width: 100%;
+  justify-content: center;
+}  
+
+.about-me-link {
+  margin-left: 15px;
+}
+
+.weapons-slides {
+  width: 25%;
+  margin: 15px 20px;
+  font-family: 'Teko', sans-serif;
+  color: #92bbc2;
+}
+
+.weapon-img {
+  width: 275px;
+  height: auto;
+  text-align: center;
+  font-size: 24px;
+  color:darkslategray;
+}
+
+.weapon-desc {
+  font-size: 15px;
+  text-align: center;
+  color: #969696;
+}
+
+.base-info-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 275px;
+}
+
+.table-title {
+  font-size: 22px;
+  color:darkslategray;
+  width: 255px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid darkslategray;
+}
+
+.weapon-contents {
+  font-size: 17px;
+  margin-top: 7px;
+}
+
+.damage-profile {
+  text-align: end;
+  color: rgb(205, 138, 132); 
+}
+
+.damage-profile:hover {
+  color: #92bbc2;
+}
+
+.head-dmg {
+  color: rgb(181, 56, 47);
+}
+
+.head-dmg:hover {
+  color: #f2f2f2;
+}
+
+.chest-dmg {
+  color: rgb(189, 84, 75);
+}
+
+.chest-dmg:hover {
+  color: #92bbc2;
+}
+
+.stomach-limbs-dmg {
+  color: rgb(205, 138, 132); 
+}
+
+.stomach-limbs-dmg:hover {
+  color: #6b7f83;
+}
