@@ -1,0 +1,47 @@
+Game,Name,Type,Attachment ID,Accuracy,Damage,Range,Fire Rate,Mobility,Control,Exception ID
+MW,Monolithic Suppressor,MW-Muzzle,1,6,0,9,0,-9,-3,0
+MW,Commando Foregrip,MW-Underbarrel,2,9,0,6,0,-6,9,3
+MW,Merc Foregrip,MW-Underbarrel,3,12,0,3,0,-9,6,3
+MW,VLK 3.0x Optic,MW-Optic,4,12,0,12,0,-9,-9,0
+MW,Sniper Scope,MW Optic,5,18,0,30,0,-12,-18,2
+MW,5mW Laser,MW-Laser,6,9,0,0,0,3,-3,3
+MW,Tac Laser,MW Laser,7,6,0,0,0,6,9,0
+MW,Stippled Grip Tape,MW-Rear Grip,8,0,0,0,0,9,-3,0
+MW,XRK Zodiac S440,AMAX-Barrel,9,6,0,12,0,-9,9,1
+MW,45 Round Mags,AMAX-Ammo,10,0,0,0,0,-6,-6,1
+MW,"Tempus 26.4"" Archangel",Grau-Barrel,11,9,0,18,0,-21,15,2
+MW,60 Round Mags,Grau-Ammo,12,0,0,0,0,-15,-15,2
+MW,Monolithic Integral Suppressor,MP5-Barrel,13,3,0,9,0,-12,0,3
+MW,45 Round Mags,MP5-Ammo,14,0,0,0,0,-9,-6,3
+MW,"ZLR 18"" Deadfall",Fennec-Barrel,15,12,0,18,0,-18,18,4
+MW,40 Round Drum,Fennec-Ammo,16,0,0,0,0,-9,-6,4
+MW,FTAC Sport Comb,Marksman-Stock,17,-6,0,0,0,6,-6,5
+MW,"Singuard Custom 27.6""",Marksman-Barrel,18,9,0,15,0,-9,12,5
+CW,Agency Suppressor,CW-Muzzle,19,6,6,9,0,-6,3,"6, 7"
+CW,GRU Suppressor,CW-Muzzle,20,6,6,9,0,-6,3,10
+CW,Agency Silencer,CW-Muzzle,21,6,6,9,0,-6,3,8
+CW,Wrapped Suppressor,CW-Muzzle,22,6,6,9,0,-6,3,9
+CW,Agency Choke,CW-Muzzle,23,6,6,9,0,-6,3,12
+CW,21.2' Ranger,FFAR 1-Barrel,24,0,0,15,0,-9,0,7
+CW,Salvo 50 Rnd Fast Mag,FFAR 1-Ammo,25,0,0,0,0,-12,0,7
+CW,Field Agent Grip,CW-Underbarrel,26,12,0,0,0,-6,0,"6, 7, 8"
+CW,Raider Stock,FFAR 1-Stock,27,-15,0,0,0,27,0,7
+CW,"5.9"" Task Force",MAC 10-Barrel,28,-15,9,15,0,3,0,6
+CW,Raider Stock,MAC 10-Stock,29,-15,0,0,0,18,3,6
+CW,STANAG 53 Rnd Drum,MAC 10-Ammo,30,0,0,0,0,-18,0,6
+CW,"18.2"" Strike Team",AUG-Barrel,31,0,-12,0,15,6,-9,8
+CW,Salvo 54 Rnd Fast Mag,AUG-Ammo,32,0,0,0,0,-18,0,8
+CW,Axial Arms 3x,CW-Optic,33,3,0,0,0,0,0,12
+CW,"29.1"" Combat Recon",Tundra-Barrel,34,0,0,21,0,0,-15,9
+CW,Bipod,Tundra-Underbarrel,35,15,0,0,0,-3,0,9
+CW,SAS Combat Stock,CW-Stock,36,-9,0,0,0,18,0,10
+CW,7 Rnd Speed Mag,Tundra-Ammo,37,0,0,0,0,-6,0,9
+CW,Spetsnaz Grip,Bullfrog-Underbarrel,38,12,0,0,0,-6,0,10
+CW,VDV 85 Rnd Fast Mag,Bullfrog-Ammo,39,0,0,0,0,-18,0,10
+CW,"7.4"" Task Force",Bullfrog-Barrel,40,-15,6,12,0,3,0,10
+CW,No Stock,CW-Stock,41,-12,0,0,0,21,3,"10, 12"
+CW,"21.8"" Task Force",Stoner 63-Barrel,42,-12,6,15,0,3,0,11
+CW,Salvo 150 Rnd Fast Mag,Stoner 63-Ammo,43,0,0,0,0,-9,0,11
+CW,"21.4"" Reinforced Heavy",Gallo SA12-Barrel,44,0,6,0,12,-9,0,12
+CW,STANAG 12 Rnd Tube,Gallo SA12-Ammo,45,0,0,0,0,-12,0,12
+CW,SWAT 5mw Laser Sight,Gallo SA12-Laser,46,21,0,0,0,-3,0,12

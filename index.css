@@ -39,8 +39,16 @@
   margin-left: 15px;
 }
 
-.weapons-slides {
+/* .weapons-container {
   width: 25%;
+} */
+
+.all-weapons {
+  width: 95%;
+}
+
+
+.weapons-slides {
   margin: 15px 20px;
   font-family: 'Teko', sans-serif;
   color: #92bbc2;
@@ -112,4 +120,8 @@
 
 .stomach-limbs-dmg:hover {
   color: #6b7f83;
+}
+
+.contents-container {
+  display: flex;
 }
