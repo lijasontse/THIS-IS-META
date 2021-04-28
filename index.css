@@ -59,13 +59,14 @@
   height: auto;
   text-align: center;
   font-size: 24px;
-  color:darkslategray;
+  color:#828F77;
 }
 
 .weapon-desc {
   font-size: 15px;
   text-align: center;
   color: #969696;
+  font-style: oblique;
 }
 
 .base-info-table {
@@ -76,12 +77,12 @@
 }
 
 .table-title {
-  font-size: 22px;
-  color:darkslategray;
+  font-size: 24px;
+  color: #4D6C75;
   width: 255px;
   display: flex;
   justify-content: center;
-  border-bottom: 2px solid darkslategray;
+  border-bottom: 1px solid darkslategray;
 }
 
 .weapon-contents {
@@ -124,4 +125,9 @@
 
 .contents-container {
   display: flex;
+}
+
+.attachments-dropdown {
+  display: flex;
+  justify-content: center;
 }
