@@ -12,12 +12,12 @@ d3.csv("base_weapon_stats.csv", d => {
     type: d["Type"],
     weaponId: d["Weapon ID"],
     classId: d["Class ID"],
-    accuracy: +d["Accuracy"],
-    damage: +d["Damage"],
-    range: +d["Range"],
-    fireRate: +d["Fire Rate"],
-    mobility: +d["Mobility"],
-    control: +d["Control"]
+    Accuracy: +d["Accuracy"],
+    Damage: +d["Damage"],
+    Range: +d["Range"],
+    FireRate: +d["Fire Rate"],
+    Mobility: +d["Mobility"],
+    Control: +d["Control"]
   };
 }).then(data => {
     weaponData = data;
@@ -79,7 +79,7 @@ const createBarPlot = (weaponData, idx) => {
       .call(xAxis);
     
     svg.selectAll("x-axis, text")
-      .attr("transform", "translate(10, 32)rotate(-45)")
+      .attr("transform", "translate(10, 40)rotate(-42)")
       .style("text-anchor", "start");
 
   let yAxis = d3
@@ -90,7 +90,6 @@ const createBarPlot = (weaponData, idx) => {
       .append("g")
       .attr("class", `${targetSVG}-y-axis y-axis`)
       .attr("transform", "translate(" + (margin.right - 50) + ",0)")
-      .style("opacity", "25%")
       .call(yAxis);
 
   svg
@@ -107,7 +106,7 @@ const createBarPlot = (weaponData, idx) => {
     .append("text")
     .attr("class", "source-text")
     .attr("transform",
-    "translate(0, " + (height + margin.top + 40) + ")")
+    "translate(0, " + (height + margin.top + 50) + ")")
     .style("text-anchor", "left")
     .text("Source: Call of Duty Warzone");
 
@@ -130,7 +129,7 @@ const createBarPlot = (weaponData, idx) => {
     return height - yScale(d);
   })
   .transition()
-  .duration(500);
+  .duration(1500);
 }
 
 // vertical data
