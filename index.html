@@ -10,6 +10,8 @@
   <link rel="stylesheet" type="text/css" href="./index.css" />
   <link rel="stylesheet" type="text/css" href="./reset.css" />
   <link rel="stylesheet" type="text/css" href="./sidebar.css" />
+  <link rel="stylesheet" type="text/css" href="./barplot.css" />
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Teko:wght@500&display=swap"
@@ -108,6 +110,7 @@
                 </table>
               </div>
             </div>
+            <div class="d3-svg-container" id="meta-vis"></div>
 
             <div class="weapon-1-summ" id=weapon-1-container>
               <a id="weapon-1" class="weapon"></a>
@@ -345,7 +348,7 @@
             <div class="weapon-5-summ" id="weapon-5-container">
               <div class="weapon-img">
                 MAC-10
-                <img src="">
+                <img src="https://meta-image.s3-us-west-1.amazonaws.com/mac10.gif">
                 <div class="weapon-desc">
                   "Full-auto submachine gun. Fastest fire rate in class with higher vertical recoil. 
                   Improved handling speeds with reduced damage."
@@ -756,74 +759,88 @@
         </div>
       </div>
 
-      <div class='container'>
+      <div class="all-dropdown-container">
+        <div class='first-container'>
+  
+          <div class='dropdown' id='muzzle-dropdown'>
+            <div class='dropdown-button'>MUZZLE
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li>MONOLITHIC SUPPRESSOR</li>
+            </ul>
+          </div>
+  
+          <div class='dropdown' id='barrel-dropdown'>
+            <div class='dropdown-button'>BARREL
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li>XRK ZODIAC S440</li>
+              <li>XRK ZODIAC S440</li>
+              <li>XRK ZODIAC S440</li>
 
-        <div class='dropdown' id='muzzle-dropdown'>
-          <div class='dropdown-button'>MUZZLE</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li>Monolithic Suppressor</li>
-          </ul>
+            </ul>
+          </div>
+  
+          <div class='dropdown' id='laser-dropdown'>
+            <div class='dropdown-button'>LASER
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li></li>
+            </ul>
+          </div>
+  
+          <div class='dropdown' id='optic-dropdown'>
+            <div class='dropdown-button'>OPTIC
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li></li>
+            </ul>
+          </div>
+  
+          <div class='dropdown' id='stock-dropdown'>
+            <div class='dropdown-button'>STOCK
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li></li>
+            </ul>
+          </div>  
         </div>
-
-        <div class='dropdown' id='barrel-dropdown'>
-          <div class='dropdown-button'>BARREL</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li>XRK Zodiac S440</li>
-          </ul>
+  
+        <div class="second-container">
+          <div class='dropdown' id='underbarrel-dropdown'>
+            <div class='dropdown-button'>UNDERBARREL
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li></li>
+            </ul>
+          </div>
+    
+          <div class='dropdown' id='ammo-dropdown'>
+            <div class='dropdown-button'>AMMUNITION
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li></li>
+            </ul>
+          </div>
+    
+          <div class='dropdown' id='reargrip-dropdown'>
+            <div class='dropdown-button'>REAR GRIP
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li></li>
+            </ul>
+          </div>
         </div>
-
-        <div class='dropdown' id='laser-dropdown'>
-          <div class='dropdown-button'>LASER</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li></li>
-          </ul>
-        </div>
-
-        <div class='dropdown' id='optic-dropdown'>
-          <div class='dropdown-button'>OPTIC</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li></li>
-          </ul>
-        </div>
-
-        <div class='dropdown' id='stock-dropdown'>
-          <div class='dropdown-button'>STOCK</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li></li>
-          </ul>
-        </div>
-
-        <div class='dropdown' id='underbarrel-dropdown'>
-          <div class='dropdown-button'>UNDERBARREL</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li></li>
-          </ul>
-        </div>
-
-        <div class='dropdown' id='ammo-dropdown'>
-          <div class='dropdown-button'>AMMUNITION</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li></li>
-          </ul>
-        </div>
-
-        <div class='dropdown' id='reargrip-dropdown'>
-          <div class='dropdown-button'>REAR GRIP</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li></li>
-          </ul>
-        </div>
-
       </div>
-
+      
 
       <ul class="side-navs" id="nav-links-ul"></ul>
     </div>

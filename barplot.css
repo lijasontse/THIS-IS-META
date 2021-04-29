@@ -1,0 +1,17 @@
+.d3-svg-container {
+  width: 75%;
+  height: 100%;
+}
+
+#meta-vis {
+  color: red;
+  /* position: fixed; */
+  height: 100%;
+  align-self: flex-start;
+  margin-left: 20vw;
+  background-color: white;
+}
+
+.slide-svg-0-rect {
+  fill: grey
+}
