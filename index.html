@@ -10,6 +10,8 @@
   <link rel="stylesheet" type="text/css" href="./index.css" />
   <link rel="stylesheet" type="text/css" href="./reset.css" />
   <link rel="stylesheet" type="text/css" href="./sidebar.css" />
+  <link rel="stylesheet" type="text/css" href="./barplot.css" />
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Teko:wght@500&display=swap"
@@ -47,785 +49,903 @@
     <div class="contents-container">
       <div class="all-weapons">
         <div class="weapons-container">
-          <div class="weapons-slides">
-            <div class="weapon-0-summ" id="weapon-0-container">
-              <a id="weapon-0" class="weapon"></a>
-              <div class="weapon-img">
-                CR-56 AMAX
-                <img src="https://meta-image.s3-us-west-1.amazonaws.com/amax.jpeg">
-                <div class="weapon-desc">
-                  "This lightweight 7.62 x 39mm full auto assault rifle is compact and powerful.
-                  Built exclusively for military use, the standard issue rifle is deadly at mid range combat
-                  and easily configured for a variety of assault tactics."
+          <div class="weapons-index">
+            <div class="all-dropdown-container">
+              <div class='first-container'>
+            
+                <div class='dropdown' id='muzzle-dropdown'>
+                  <div class='dropdown-button'>MUZZLE
+                    <span class='triangle'>&#9660;</span>
+                  </div>
+                  <ul class='dropdown-selection'>
+                    <li>MONOLITHIC SUPPRESSOR</li>
+                  </ul>
+                </div>
+            
+                <div class='dropdown' id='barrel-dropdown'>
+                  <div class='dropdown-button'>BARREL
+                    <span class='triangle'>&#9660;</span>
+                  </div>
+                  <ul class='dropdown-selection'>
+                    <li>XRK ZODIAC S440</li>
+                    <li>XRK ZODIAC S440</li>
+                    <li>XRK ZODIAC S440</li>
+            
+                  </ul>
+                </div>
+            
+                <div class='dropdown' id='laser-dropdown'>
+                  <div class='dropdown-button'>LASER
+                    <span class='triangle'>&#9660;</span>
+                  </div>
+                  <ul class='dropdown-selection'>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class='dropdown' id='optic-dropdown'>
+                  <div class='dropdown-button'>OPTIC
+                    <span class='triangle'>&#9660;</span>
+                  </div>
+                  <ul class='dropdown-selection'>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class='dropdown' id='stock-dropdown'>
+                  <div class='dropdown-button'>STOCK
+                    <span class='triangle'>&#9660;</span>
+                  </div>
+                  <ul class='dropdown-selection'>
+                    <li></li>
+                  </ul>
                 </div>
               </div>
-              <div class="weapon-info-container">
-                <table class="base-info-table">
-                  <thead class="table-title">
-                    <tr>
-                      <th>BASE STATS</th>
-                    </tr>
-                  </thead>
-                  <tbody class="weapon-contents">
-                    <tr>
-                      <td><span>Damage</span></td>
-                      <td>
-                        <div class="damage-profile">
-                          <span class="head-dmg">56</span>
-                          <span class="chest-dmg">| 42</span>
-                          <span class="stomach-limbs-dmg">| 35</span>
-                          <span class="stomach-limbs-dmg">| 35</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Mag Size</span></td>
-                      <td>
-                        <div class="damage-profile"><span>30</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>RPM</span></td>
-                      <td>
-                        <div class="damage-profile"><span>620</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Reload Time</span></td>
-                      <td>
-                        <div class="damage-profile"><span>2.816 s</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Base Range</span></td>
-                      <td>
-                        <div class="damage-profile"><span>
-                            < 24m</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+            
+              <div class="second-container">
+                <div class='dropdown' id='underbarrel-dropdown'>
+                  <div class='dropdown-button'>UNDERBARREL
+                    <span class='triangle'>&#9660;</span>
+                  </div>
+                  <ul class='dropdown-selection'>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class='dropdown' id='ammo-dropdown'>
+                  <div class='dropdown-button'>AMMUNITION
+                    <span class='triangle'>&#9660;</span>
+                  </div>
+                  <ul class='dropdown-selection'>
+                    <li></li>
+                  </ul>
+                </div>
+            
+                <div class='dropdown' id='reargrip-dropdown'>
+                  <div class='dropdown-button'>REAR GRIP
+                    <span class='triangle'>&#9660;</span>
+                  </div>
+                  <ul class='dropdown-selection'>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="weapon-summ" id="weapon-0-container">
+              <div class="weapon-slides-wrapper">
+                <div class="weapon-img">
+                  CR-56 AMAX
+                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/amax.jpeg">
+                  <div class="weapon-desc">
+                    "This lightweight 7.62 x 39mm full auto assault rifle is compact and powerful.
+                    Built exclusively for military use, the standard issue rifle is deadly at mid range combat
+                    and easily configured for a variety of assault tactics."
+                  </div>
+                </div>
+                <div class="weapon-info-container">
+                  <table class="base-info-table">
+                    <thead class="table-title">
+                      <tr>
+                        <th>BASE STATS</th>
+                      </tr>
+                    </thead>
+                    <tbody class="weapon-contents">
+                      <tr>
+                        <td><span>Damage</span></td>
+                        <td>
+                          <div class="damage-profile">
+                            <span class="head-dmg">56</span>
+                            <span class="chest-dmg">| 42</span>
+                            <span class="stomach-limbs-dmg">| 35</span>
+                            <span class="stomach-limbs-dmg">| 35</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Mag Size</span></td>
+                        <td>
+                          <div class="damage-profile"><span>30</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>RPM</span></td>
+                        <td>
+                          <div class="damage-profile"><span>620</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Reload Time</span></td>
+                        <td>
+                          <div class="damage-profile"><span>2.816 s</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Base Range</span></td>
+                        <td>
+                          <div class="damage-profile"><span>
+                              < 24m</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="d3-svg-container" id="meta-vis"></div>
+            </div>
+
+            <div class="weapon-summ" id=weapon-1-container>
+              <div class="weapon-slides-wrapper">
+                <div class="weapon-img">
+                  GRAU 5.56
+                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/grau.jpeg">
+                  <div class="weapon-desc">
+                    "This modular 5.56 weapon platform is lightweight and maneuverable, with exceptional range. 
+                    Precision engineering and world class aftermarket barrels give this weapon extreme potential."
+                  </div>
+                </div>
+                <div class="weapon-info-container">
+                  <table class="base-info-table">
+                    <thead class="table-title">
+                      <tr><th>BASE STATS</th></tr>
+                    </thead>
+                    <tbody class="weapon-contents">
+                      <tr>
+                        <td><span>Damage</span></td>
+                        <td>
+                          <div class="damage-profile">
+                            <span class="head-dmg">42</span>
+                            <span class="chest-dmg">| 28</span>
+                            <span class="stomach-limbs-dmg">| 28</span>
+                            <span class="stomach-limbs-dmg">| 28</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Mag Size</span></td>
+                        <td>
+                          <div class="damage-profile"><span>30</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>RPM</span></td>
+                        <td>
+                          <div class="damage-profile"><span>730</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Reload Time</span></td>
+                        <td>
+                          <div class="damage-profile"><span>2.710 s</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Base Range</span></td>
+                        <td>
+                          <div class="damage-profile"><span>< 31m</span></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
 
-            <div class="weapon-1-summ" id=weapon-1-container>
-              <a id="weapon-1" class="weapon"></a>
-              <div class="weapon-img">
-                GRAU 5.56
-                <img src="https://meta-image.s3-us-west-1.amazonaws.com/grau.jpeg">
-                <div class="weapon-desc">
-                  "This modular 5.56 weapon platform is lightweight and maneuverable, with exceptional range. 
-                  Precision engineering and world class aftermarket barrels give this weapon extreme potential."
+            <div class="weapon-summ" id="weapon-2-container">
+              <div class="weapon-slides-wrapper">
+                <div class="weapon-img">
+                  MP5
+                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/mp5.jpeg">
+                  <div class="weapon-desc">
+                    "Fully automatic 9mm submachine gun. A perfect balance of stability, mobility, and lethality."
+                  </div>
                 </div>
-              </div>
-              <div class="weapon-info-container">
-                <table class="base-info-table">
-                  <thead class="table-title">
-                    <tr><th>BASE STATS</th></tr>
-                  </thead>
-                  <tbody class="weapon-contents">
-                    <tr>
-                      <td><span>Damage</span></td>
-                      <td>
-                        <div class="damage-profile">
-                          <span class="head-dmg">42</span>
-                          <span class="chest-dmg">| 28</span>
-                          <span class="stomach-limbs-dmg">| 28</span>
-                          <span class="stomach-limbs-dmg">| 28</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Mag Size</span></td>
-                      <td>
-                        <div class="damage-profile"><span>30</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>RPM</span></td>
-                      <td>
-                        <div class="damage-profile"><span>730</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Reload Time</span></td>
-                      <td>
-                        <div class="damage-profile"><span>2.710 s</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Base Range</span></td>
-                      <td>
-                        <div class="damage-profile"><span>< 31m</span></div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="weapon-info-container">
+                  <table class="base-info-table">
+                    <thead class="table-title">
+                      <tr>
+                        <th>BASE STATS</th>
+                      </tr>
+                    </thead>
+                    <tbody class="weapon-contents">
+                      <tr>
+                        <td><span>Damage</span></td>
+                        <td>
+                          <div class="damage-profile">
+                            <span class="head-dmg">49</span>
+                            <span class="chest-dmg">| 34</span>
+                            <span class="stomach-limbs-dmg">| 34</span>
+                            <span class="stomach-limbs-dmg">| 30</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Mag Size</span></td>
+                        <td>
+                          <div class="damage-profile"><span>30</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>RPM</span></td>
+                        <td>
+                          <div class="damage-profile"><span>800</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Reload Time</span></td>
+                        <td>
+                          <div class="damage-profile"><span>2.794 s</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Base Range</span></td>
+                        <td>
+                          <div class="damage-profile"><span>
+                              < 10m</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
 
-            <div class="weapon-2-summ" id="weapon-2-container">
-              <a id="weapon-2" class="weapon"></a>
-              <div class="weapon-img">
-                MP5
-                <img src="https://meta-image.s3-us-west-1.amazonaws.com/mp5.jpeg">
-                <div class="weapon-desc">
-                  "Fully automatic 9mm submachine gun. A perfect balance of stability, mobility, and lethality."
+            <div class="weapon-summ" id="weapon-3-container">
+              <div class="weapon-slides-wrapper">
+                <div class="weapon-img">
+                  FENNEC
+                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/fennec.jpeg">
+                  <div class="weapon-desc">
+                    "An aggressive full auto submachine gun with buttery smooth recoil and a blazing fast rate of fire that is exceptional
+                    for strategic room clearing and holding down the front line."
+                  </div>
                 </div>
-              </div>
-              <div class="weapon-info-container">
-                <table class="base-info-table">
-                  <thead class="table-title">
-                    <tr>
-                      <th>BASE STATS</th>
-                    </tr>
-                  </thead>
-                  <tbody class="weapon-contents">
-                    <tr>
-                      <td><span>Damage</span></td>
-                      <td>
-                        <div class="damage-profile">
-                          <span class="head-dmg">49</span>
-                          <span class="chest-dmg">| 34</span>
-                          <span class="stomach-limbs-dmg">| 34</span>
-                          <span class="stomach-limbs-dmg">| 30</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Mag Size</span></td>
-                      <td>
-                        <div class="damage-profile"><span>30</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>RPM</span></td>
-                      <td>
-                        <div class="damage-profile"><span>800</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Reload Time</span></td>
-                      <td>
-                        <div class="damage-profile"><span>2.794 s</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Base Range</span></td>
-                      <td>
-                        <div class="damage-profile"><span>
-                            < 10m</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="weapon-info-container">
+                  <table class="base-info-table">
+                    <thead class="table-title">
+                      <tr>
+                        <th>BASE STATS</th>
+                      </tr>
+                    </thead>
+                    <tbody class="weapon-contents">
+                      <tr>
+                        <td><span>Damage</span></td>
+                        <td>
+                          <div class="damage-profile">
+                            <span class="head-dmg">40</span>
+                            <span class="chest-dmg">| 25</span>
+                            <span class="stomach-limbs-dmg">| 25</span>
+                            <span class="stomach-limbs-dmg">| 22</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Mag Size</span></td>
+                        <td>
+                          <div class="damage-profile"><span>25</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>RPM</span></td>
+                        <td>
+                          <div class="damage-profile"><span>1100</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Reload Time</span></td>
+                        <td>
+                          <div class="damage-profile"><span>2.945 s</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Base Range</span></td>
+                        <td>
+                          <div class="damage-profile"><span>
+                              < 13m</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
 
-            <div class="weapon-3-summ" id="weapon-3-container">
-              <div class="weapon-img">
-                FENNEC
-                <img src="https://meta-image.s3-us-west-1.amazonaws.com/fennec.jpeg">
-                <div class="weapon-desc">
-                  "An aggressive full auto submachine gun with buttery smooth recoil and a blazing fast rate of fire that is exceptional
-                  for strategic room clearing and holding down the front line."
+            <div class="weapon-summ" id="weapon-4-container">
+              <div class="weapon-slides-wrapper">
+                <div class="weapon-img">
+                  KAR 98K
+                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/kar.jpeg">
+                  <div class="weapon-desc">
+                    "Bolt action rifle chambered in 7.92 Mauser. 
+                    A WW2 relic that is still extremely lethal in the hands of a rebel marksman."
+                  </div>
                 </div>
-              </div>
-              <div class="weapon-info-container">
-                <table class="base-info-table">
-                  <thead class="table-title">
-                    <tr>
-                      <th>BASE STATS</th>
-                    </tr>
-                  </thead>
-                  <tbody class="weapon-contents">
-                    <tr>
-                      <td><span>Damage</span></td>
-                      <td>
-                        <div class="damage-profile">
-                          <span class="head-dmg">40</span>
-                          <span class="chest-dmg">| 25</span>
-                          <span class="stomach-limbs-dmg">| 25</span>
-                          <span class="stomach-limbs-dmg">| 22</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Mag Size</span></td>
-                      <td>
-                        <div class="damage-profile"><span>25</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>RPM</span></td>
-                      <td>
-                        <div class="damage-profile"><span>1100</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Reload Time</span></td>
-                      <td>
-                        <div class="damage-profile"><span>2.945 s</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Base Range</span></td>
-                      <td>
-                        <div class="damage-profile"><span>
-                            < 13m</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="weapon-info-container">
+                  <table class="base-info-table">
+                    <thead class="table-title">
+                      <tr>
+                        <th>BASE STATS</th>
+                      </tr>
+                    </thead>
+                    <tbody class="weapon-contents">
+                      <tr>
+                        <td><span>Damage</span></td>
+                        <td>
+                          <div class="damage-profile">
+                            <span class="head-dmg">250</span>
+                            <span class="chest-dmg">| 154</span>
+                            <span class="stomach-limbs-dmg">| 86</span>
+                            <span class="stomach-limbs-dmg">| 86</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Mag Size</span></td>
+                        <td>
+                          <div class="damage-profile"><span>5</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>RPM</span></td>
+                        <td>
+                          <div class="damage-profile"><span>44</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Reload Time</span></td>
+                        <td>
+                          <div class="damage-profile"><span>3.565 s</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Base Range</span></td>
+                        <td>
+                          <div class="damage-profile"><span>
+                              < 60m</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
 
-            <div class="weapon-4-summ" id="weapon-4-container">
-              <div class="weapon-img">
-                KAR 98K
-                <img src="https://meta-image.s3-us-west-1.amazonaws.com/kar.jpeg">
-                <div class="weapon-desc">
-                  "Bolt action rifle chambered in 7.92 Mauser. 
-                  A WW2 relic that is still extremely lethal in the hands of a rebel marksman."
+            <div class="weapon-summ" id="weapon-5-container">
+              <div class="weapon-slides-wrapper">
+                <div class="weapon-img">
+                  MAC-10
+                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/mac10.gif">
+                  <div class="weapon-desc">
+                    "Full-auto submachine gun. Fastest fire rate in class with higher vertical recoil. 
+                    Improved handling speeds with reduced damage."
+                  </div>
                 </div>
-              </div>
-              <div class="weapon-info-container">
-                <table class="base-info-table">
-                  <thead class="table-title">
-                    <tr>
-                      <th>BASE STATS</th>
-                    </tr>
-                  </thead>
-                  <tbody class="weapon-contents">
-                    <tr>
-                      <td><span>Damage</span></td>
-                      <td>
-                        <div class="damage-profile">
-                          <span class="head-dmg">250</span>
-                          <span class="chest-dmg">| 154</span>
-                          <span class="stomach-limbs-dmg">| 86</span>
-                          <span class="stomach-limbs-dmg">| 86</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Mag Size</span></td>
-                      <td>
-                        <div class="damage-profile"><span>5</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>RPM</span></td>
-                      <td>
-                        <div class="damage-profile"><span>44</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Reload Time</span></td>
-                      <td>
-                        <div class="damage-profile"><span>3.565 s</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Base Range</span></td>
-                      <td>
-                        <div class="damage-profile"><span>
-                            < 60m</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="weapon-info-container">
+                  <table class="base-info-table">
+                    <thead class="table-title">
+                      <tr>
+                        <th>BASE STATS</th>
+                      </tr>
+                    </thead>
+                    <tbody class="weapon-contents">
+                      <tr>
+                        <td><span>Damage</span></td>
+                        <td>
+                          <div class="damage-profile">
+                            <span class="head-dmg">30</span>
+                            <span class="chest-dmg">| 25</span>
+                            <span class="stomach-limbs-dmg">| 25</span>
+                            <span class="stomach-limbs-dmg">| 22</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Mag Size</span></td>
+                        <td>
+                          <div class="damage-profile"><span>32</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>RPM</span></td>
+                        <td>
+                          <div class="damage-profile"><span>1118</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Reload Time</span></td>
+                        <td>
+                          <div class="damage-profile"><span>2.000 s</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Base Range</span></td>
+                        <td>
+                          <div class="damage-profile"><span>
+                              < 15m</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
 
-            <div class="weapon-5-summ" id="weapon-5-container">
-              <div class="weapon-img">
-                MAC-10
-                <img src="">
-                <div class="weapon-desc">
-                  "Full-auto submachine gun. Fastest fire rate in class with higher vertical recoil. 
-                  Improved handling speeds with reduced damage."
+            <div class="weapon-summ" id="weapon-6-container">
+              <div class="weapon-slides-wrapper">
+                <div class="weapon-img">
+                  FFAR 1
+                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/ffar.gif">
+                  <div class="weapon-desc">
+                    "Full-auto assault rifle. Fast fire rate with quick reloading speeds. Modest damage and slightly less ammo capacity."
+                  </div>
                 </div>
-              </div>
-              <div class="weapon-info-container">
-                <table class="base-info-table">
-                  <thead class="table-title">
-                    <tr>
-                      <th>BASE STATS</th>
-                    </tr>
-                  </thead>
-                  <tbody class="weapon-contents">
-                    <tr>
-                      <td><span>Damage</span></td>
-                      <td>
-                        <div class="damage-profile">
-                          <span class="head-dmg">30</span>
-                          <span class="chest-dmg">| 25</span>
-                          <span class="stomach-limbs-dmg">| 25</span>
-                          <span class="stomach-limbs-dmg">| 22</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Mag Size</span></td>
-                      <td>
-                        <div class="damage-profile"><span>32</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>RPM</span></td>
-                      <td>
-                        <div class="damage-profile"><span>1118</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Reload Time</span></td>
-                      <td>
-                        <div class="damage-profile"><span>2.000 s</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Base Range</span></td>
-                      <td>
-                        <div class="damage-profile"><span>
-                            < 15m</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="weapon-info-container">
+                  <table class="base-info-table">
+                    <thead class="table-title">
+                      <tr>
+                        <th>BASE STATS</th>
+                      </tr>
+                    </thead>
+                    <tbody class="weapon-contents">
+                      <tr>
+                        <td><span>Damage</span></td>
+                        <td>
+                          <div class="damage-profile">
+                            <span class="head-dmg">45</span>
+                            <span class="chest-dmg">| 33</span>
+                            <span class="stomach-limbs-dmg">| 30</span>
+                            <span class="stomach-limbs-dmg">| 30</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Mag Size</span></td>
+                        <td>
+                          <div class="damage-profile"><span>25</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>RPM</span></td>
+                        <td>
+                          <div class="damage-profile"><span>900</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Reload Time</span></td>
+                        <td>
+                          <div class="damage-profile"><span>2.490 s</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Base Range</span></td>
+                        <td>
+                          <div class="damage-profile"><span>
+                              < 38m</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
 
-            <div class="weapon-6-summ" id="weapon-6-container">
-              <div class="weapon-img">
-                FFAR 1
-                <img src="https://meta-image.s3-us-west-1.amazonaws.com/ffar.gif">
-                <div class="weapon-desc">
-                  "Full-auto assault rifle. Fast fire rate with quick reloading speeds. Modest damage and slightly less ammo capacity."
+            <div class="weapon-summ" id="weapon-7-container">
+              <div class="weapon-slides-wrapper">
+                <div class="weapon-img">
+                  AUG
+                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/augblossom.gif">
+                  <div class="weapon-desc">
+                    "Burst fire tactical rifle. High damage with moderate recoil and slower movement speeds when firing. 
+                    Built in optic provides 1.5x magnification."
+                  </div>
                 </div>
-              </div>
-              <div class="weapon-info-container">
-                <table class="base-info-table">
-                  <thead class="table-title">
-                    <tr>
-                      <th>BASE STATS</th>
-                    </tr>
-                  </thead>
-                  <tbody class="weapon-contents">
-                    <tr>
-                      <td><span>Damage</span></td>
-                      <td>
-                        <div class="damage-profile">
-                          <span class="head-dmg">45</span>
-                          <span class="chest-dmg">| 33</span>
-                          <span class="stomach-limbs-dmg">| 30</span>
-                          <span class="stomach-limbs-dmg">| 30</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Mag Size</span></td>
-                      <td>
-                        <div class="damage-profile"><span>25</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>RPM</span></td>
-                      <td>
-                        <div class="damage-profile"><span>900</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Reload Time</span></td>
-                      <td>
-                        <div class="damage-profile"><span>2.490 s</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Base Range</span></td>
-                      <td>
-                        <div class="damage-profile"><span>
-                            < 38m</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="weapon-info-container">
+                  <table class="base-info-table">
+                    <thead class="table-title">
+                      <tr>
+                        <th>BASE STATS</th>
+                      </tr>
+                    </thead>
+                    <tbody class="weapon-contents">
+                      <tr>
+                        <td><span>Damage</span></td>
+                        <td>
+                          <div class="damage-profile">
+                            <span class="head-dmg">72</span>
+                            <span class="chest-dmg">| 40</span>
+                            <span class="stomach-limbs-dmg">| 40</span>
+                            <span class="stomach-limbs-dmg">| 40</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Mag Size</span></td>
+                        <td>
+                          <div class="damage-profile"><span>30</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>RPM</span></td>
+                        <td>
+                          <div class="damage-profile"><span>830</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Reload Time</span></td>
+                        <td>
+                          <div class="damage-profile"><span>2.700 s</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Base Range</span></td>
+                        <td>
+                          <div class="damage-profile"><span>
+                              < 29m</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
 
-            <div class="weapon-7-summ" id="weapon-7-container">
-              <div class="weapon-img">
-                AUG
-                <img src="https://meta-image.s3-us-west-1.amazonaws.com/augblossom.gif">
-                <div class="weapon-desc">
-                  "Burst fire tactical rifle. High damage with moderate recoil and slower movement speeds when firing. 
-                  Built in optic provides 1.5x magnification."
+            <div class="weapon-summ" id="weapon-8-container">
+              <div class="weapon-slides-wrapper">
+                <div class="weapon-img">
+                  LW3 - TUNDRA
+                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/tundrapurple.gif">
+                  <div class="weapon-desc">
+                    "Bolt-action sniper rifle. High damage with moderate sway. 1-shot kill to the head, upper-chest, and shoulders. 
+                    Hold L3 while ADS to steady."
+                  </div>
                 </div>
-              </div>
-              <div class="weapon-info-container">
-                <table class="base-info-table">
-                  <thead class="table-title">
-                    <tr>
-                      <th>BASE STATS</th>
-                    </tr>
-                  </thead>
-                  <tbody class="weapon-contents">
-                    <tr>
-                      <td><span>Damage</span></td>
-                      <td>
-                        <div class="damage-profile">
-                          <span class="head-dmg">72</span>
-                          <span class="chest-dmg">| 40</span>
-                          <span class="stomach-limbs-dmg">| 40</span>
-                          <span class="stomach-limbs-dmg">| 40</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Mag Size</span></td>
-                      <td>
-                        <div class="damage-profile"><span>30</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>RPM</span></td>
-                      <td>
-                        <div class="damage-profile"><span>830</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Reload Time</span></td>
-                      <td>
-                        <div class="damage-profile"><span>2.700 s</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Base Range</span></td>
-                      <td>
-                        <div class="damage-profile"><span>
-                            < 29m</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="weapon-info-container">
+                  <table class="base-info-table">
+                    <thead class="table-title">
+                      <tr>
+                        <th>BASE STATS</th>
+                      </tr>
+                    </thead>
+                    <tbody class="weapon-contents">
+                      <tr>
+                        <td><span>Damage</span></td>
+                        <td>
+                          <div class="damage-profile">
+                            <span class="head-dmg">250</span>
+                            <span class="chest-dmg">| 112</span>
+                            <span class="stomach-limbs-dmg">| 102</span>
+                            <span class="stomach-limbs-dmg">| 91</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Mag Size</span></td>
+                        <td>
+                          <div class="damage-profile"><span>5</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>RPM</span></td>
+                        <td>
+                          <div class="damage-profile"><span>180</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Reload Time</span></td>
+                        <td>
+                          <div class="damage-profile"><span>3.000 s</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Base Range</span></td>
+                        <td>
+                          <div class="damage-profile"><span>
+                              < 70m</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
 
-            <div class="weapon-8-summ" id="weapon-8-container">
-              <div class="weapon-img">
-                LW3 - TUNDRA
-                <img src="https://meta-image.s3-us-west-1.amazonaws.com/tundrapurple.gif">
-                <div class="weapon-desc">
-                  "Bolt-action sniper rifle. High damage with moderate sway. 1-shot kill to the head, upper-chest, and shoulders. 
-                  Hold L3 while ADS to steady."
+            <div class="weapon-summ" id="weapon-9-container">
+              <div class="weapon-slides-wrapper">
+                <div class="weapon-img">
+                  BULLFROG
+                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/bullfrog.gif">
+                  <div class="weapon-desc">
+                    "Full-auto submachine gun. Reliable damage with improved range. 
+                    Large ammo pool and less accurate hipfire spread."
+                  </div>
                 </div>
-              </div>
-              <div class="weapon-info-container">
-                <table class="base-info-table">
-                  <thead class="table-title">
-                    <tr>
-                      <th>BASE STATS</th>
-                    </tr>
-                  </thead>
-                  <tbody class="weapon-contents">
-                    <tr>
-                      <td><span>Damage</span></td>
-                      <td>
-                        <div class="damage-profile">
-                          <span class="head-dmg">250</span>
-                          <span class="chest-dmg">| 112</span>
-                          <span class="stomach-limbs-dmg">| 102</span>
-                          <span class="stomach-limbs-dmg">| 91</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Mag Size</span></td>
-                      <td>
-                        <div class="damage-profile"><span>5</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>RPM</span></td>
-                      <td>
-                        <div class="damage-profile"><span>180</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Reload Time</span></td>
-                      <td>
-                        <div class="damage-profile"><span>3.000 s</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Base Range</span></td>
-                      <td>
-                        <div class="damage-profile"><span>
-                            < 70m</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="weapon-info-container">
+                  <table class="base-info-table">
+                    <thead class="table-title">
+                      <tr>
+                        <th>BASE STATS</th>
+                      </tr>
+                    </thead>
+                    <tbody class="weapon-contents">
+                      <tr>
+                        <td><span>Damage</span></td>
+                        <td>
+                          <div class="damage-profile">
+                            <span class="head-dmg">55</span>
+                            <span class="chest-dmg">| 34</span>
+                            <span class="stomach-limbs-dmg">| 30</span>
+                            <span class="stomach-limbs-dmg">| 30</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Mag Size</span></td>
+                        <td>
+                          <div class="damage-profile"><span>50</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>RPM</span></td>
+                        <td>
+                          <div class="damage-profile"><span>780</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Reload Time</span></td>
+                        <td>
+                          <div class="damage-profile"><span>2.800 s</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Base Range</span></td>
+                        <td>
+                          <div class="damage-profile"><span>
+                              < 12m</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
 
-            <div class="weapon-9-summ" id="weapon-9-container">
-              <div class="weapon-img">
-                BULLFROG
-                <img src="https://meta-image.s3-us-west-1.amazonaws.com/bullfrog.gif">
-                <div class="weapon-desc">
-                  "Full-auto submachine gun. Reliable damage with improved range. 
-                  Large ammo pool and less accurate hipfire spread."
+            <div class="weapon-summ" id="weapon-10-container">
+              <div class="weapon-slides-wrapper">
+                <div class="weapon-img">
+                  STONER 63
+                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/stoner.gif">
+                  <div class="weapon-desc">
+                    "Full-auto light machine gun. Improved fire rate with a larger ammo capacity. 
+                    Subdued recoil and good visibility while firing."
+                  </div>
                 </div>
-              </div>
-              <div class="weapon-info-container">
-                <table class="base-info-table">
-                  <thead class="table-title">
-                    <tr>
-                      <th>BASE STATS</th>
-                    </tr>
-                  </thead>
-                  <tbody class="weapon-contents">
-                    <tr>
-                      <td><span>Damage</span></td>
-                      <td>
-                        <div class="damage-profile">
-                          <span class="head-dmg">55</span>
-                          <span class="chest-dmg">| 34</span>
-                          <span class="stomach-limbs-dmg">| 30</span>
-                          <span class="stomach-limbs-dmg">| 30</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Mag Size</span></td>
-                      <td>
-                        <div class="damage-profile"><span>50</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>RPM</span></td>
-                      <td>
-                        <div class="damage-profile"><span>780</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Reload Time</span></td>
-                      <td>
-                        <div class="damage-profile"><span>2.800 s</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Base Range</span></td>
-                      <td>
-                        <div class="damage-profile"><span>
-                            < 12m</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="weapon-info-container">
+                  <table class="base-info-table">
+                    <thead class="table-title">
+                      <tr>
+                        <th>BASE STATS</th>
+                      </tr>
+                    </thead>
+                    <tbody class="weapon-contents">
+                      <tr>
+                        <td><span>Damage</span></td>
+                        <td>
+                          <div class="damage-profile">
+                            <span class="head-dmg">51</span>
+                            <span class="chest-dmg">| 37</span>
+                            <span class="stomach-limbs-dmg">| 34</span>
+                            <span class="stomach-limbs-dmg">| 34</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Mag Size</span></td>
+                        <td>
+                          <div class="damage-profile"><span>75</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>RPM</span></td>
+                        <td>
+                          <div class="damage-profile"><span>735</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Reload Time</span></td>
+                        <td>
+                          <div class="damage-profile"><span>6.000 s</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Base Range</span></td>
+                        <td>
+                          <div class="damage-profile"><span>
+                              < 40m</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
 
-            <div class="weapon-10-summ" id="weapon-10-container">
-              <div class="weapon-img">
-                STONER 63
-                <img src="https://meta-image.s3-us-west-1.amazonaws.com/stoner.gif">
-                <div class="weapon-desc">
-                  "Full-auto light machine gun. Improved fire rate with a larger ammo capacity. 
-                  Subdued recoil and good visibility while firing."
+            <div class="weapon-summ" id="weapon-11-container">
+              <div class="weapon-slides-wrapper">
+                <div class="weapon-img">
+                  GALLO SA12
+                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/gallo.gif">
+                  <div class="weapon-desc">
+                    "Semi-auto shotgun. Reliable damage and pellet spread. Moderate recoil and visibility when firing."
+                  </div>
                 </div>
-              </div>
-              <div class="weapon-info-container">
-                <table class="base-info-table">
-                  <thead class="table-title">
-                    <tr>
-                      <th>BASE STATS</th>
-                    </tr>
-                  </thead>
-                  <tbody class="weapon-contents">
-                    <tr>
-                      <td><span>Damage</span></td>
-                      <td>
-                        <div class="damage-profile">
-                          <span class="head-dmg">51</span>
-                          <span class="chest-dmg">| 37</span>
-                          <span class="stomach-limbs-dmg">| 34</span>
-                          <span class="stomach-limbs-dmg">| 34</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Mag Size</span></td>
-                      <td>
-                        <div class="damage-profile"><span>75</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>RPM</span></td>
-                      <td>
-                        <div class="damage-profile"><span>735</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Reload Time</span></td>
-                      <td>
-                        <div class="damage-profile"><span>6.000 s</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Base Range</span></td>
-                      <td>
-                        <div class="damage-profile"><span>
-                            < 40m</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                <div class="weapon-info-container">
+                  <table class="base-info-table">
+                    <thead class="table-title">
+                      <tr>
+                        <th>BASE STATS</th>
+                      </tr>
+                    </thead>
+                    <tbody class="weapon-contents">
+                      <tr>
+                        <td><span>Damage</span></td>
+                        <td>
+                          <div class="damage-profile">
+                            <span class="head-dmg">206</span>
+                            <span class="chest-dmg">| 166</span>
+                            <span class="stomach-limbs-dmg">| 166</span>
+                            <span class="stomach-limbs-dmg">| 166</span>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Mag Size</span></td>
+                        <td>
+                          <div class="damage-profile"><span>7</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>RPM</span></td>
+                        <td>
+                          <div class="damage-profile"><span>66</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Reload Time</span></td>
+                        <td>
+                          <div class="damage-profile"><span>4.500 s</span></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><span>Base Range</span></td>
+                        <td>
+                          <div class="damage-profile"><span>
+                              < 2.5m</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>  
             </div>
 
-            <div class="weapon-11-summ" id="weapon-11-container">
-              <div class="weapon-img">
-                GALLO SA12
-                <img src="https://meta-image.s3-us-west-1.amazonaws.com/gallo.gif">
-                <div class="weapon-desc">
-                  "Semi-auto shotgun. Reliable damage and pellet spread. Moderate recoil and visibility when firing."
-                </div>
-              </div>
-              <div class="weapon-info-container">
-                <table class="base-info-table">
-                  <thead class="table-title">
-                    <tr>
-                      <th>BASE STATS</th>
-                    </tr>
-                  </thead>
-                  <tbody class="weapon-contents">
-                    <tr>
-                      <td><span>Damage</span></td>
-                      <td>
-                        <div class="damage-profile">
-                          <span class="head-dmg">206</span>
-                          <span class="chest-dmg">| 166</span>
-                          <span class="stomach-limbs-dmg">| 166</span>
-                          <span class="stomach-limbs-dmg">| 166</span>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Mag Size</span></td>
-                      <td>
-                        <div class="damage-profile"><span>7</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>RPM</span></td>
-                      <td>
-                        <div class="damage-profile"><span>66</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Reload Time</span></td>
-                      <td>
-                        <div class="damage-profile"><span>4.500 s</span></div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><span>Base Range</span></td>
-                      <td>
-                        <div class="damage-profile"><span>
-                            < 2.5m</span>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
           </div>
         </div>
       </div>
 
-      <div class='container'>
+      <!-- <div class="all-dropdown-container">
+        <div class='first-container'>
+  
+          <div class='dropdown' id='muzzle-dropdown'>
+            <div class='dropdown-button'>MUZZLE
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li>MONOLITHIC SUPPRESSOR</li>
+            </ul>
+          </div>
+  
+          <div class='dropdown' id='barrel-dropdown'>
+            <div class='dropdown-button'>BARREL
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li>XRK ZODIAC S440</li>
+              <li>XRK ZODIAC S440</li>
+              <li>XRK ZODIAC S440</li>
 
-        <div class='dropdown' id='muzzle-dropdown'>
-          <div class='dropdown-button'>MUZZLE</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li>Monolithic Suppressor</li>
-          </ul>
+            </ul>
+          </div>
+  
+          <div class='dropdown' id='laser-dropdown'>
+            <div class='dropdown-button'>LASER
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li></li>
+            </ul>
+          </div>
+  
+          <div class='dropdown' id='optic-dropdown'>
+            <div class='dropdown-button'>OPTIC
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li></li>
+            </ul>
+          </div>
+  
+          <div class='dropdown' id='stock-dropdown'>
+            <div class='dropdown-button'>STOCK
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li></li>
+            </ul>
+          </div>  
         </div>
-
-        <div class='dropdown' id='barrel-dropdown'>
-          <div class='dropdown-button'>BARREL</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li>XRK Zodiac S440</li>
-          </ul>
+  
+        <div class="second-container">
+          <div class='dropdown' id='underbarrel-dropdown'>
+            <div class='dropdown-button'>UNDERBARREL
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li></li>
+            </ul>
+          </div>
+    
+          <div class='dropdown' id='ammo-dropdown'>
+            <div class='dropdown-button'>AMMUNITION
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li></li>
+            </ul>
+          </div>
+    
+          <div class='dropdown' id='reargrip-dropdown'>
+            <div class='dropdown-button'>REAR GRIP
+              <span class='triangle'>&#9660;</span>
+            </div>
+            <ul class='dropdown-selection'>
+              <li></li>
+            </ul>
+          </div>
         </div>
+      </div> -->
+      
 
-        <div class='dropdown' id='laser-dropdown'>
-          <div class='dropdown-button'>LASER</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li></li>
-          </ul>
-        </div>
-
-        <div class='dropdown' id='optic-dropdown'>
-          <div class='dropdown-button'>OPTIC</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li></li>
-          </ul>
-        </div>
-
-        <div class='dropdown' id='stock-dropdown'>
-          <div class='dropdown-button'>STOCK</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li></li>
-          </ul>
-        </div>
-
-        <div class='dropdown' id='underbarrel-dropdown'>
-          <div class='dropdown-button'>UNDERBARREL</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li></li>
-          </ul>
-        </div>
-
-        <div class='dropdown' id='ammo-dropdown'>
-          <div class='dropdown-button'>AMMUNITION</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li></li>
-          </ul>
-        </div>
-
-        <div class='dropdown' id='reargrip-dropdown'>
-          <div class='dropdown-button'>REAR GRIP</div>
-          <span class='triangle'>&#9660;</span>
-          <ul class='dropdown-selection'>
-            <li></li>
-          </ul>
-        </div>
-
-      </div>
-
-
-      <ul class="side-navs" id="nav-links-ul"></ul>
+      <ul class="side-navs"></ul>
     </div>
   </div>
   <script type="text/javascript" src="./dist/bundle.js"></script>

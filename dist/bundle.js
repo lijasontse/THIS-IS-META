@@ -30686,13 +30686,162 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
+ // d3.csv("attachment_stats - Sheet1.csv", d => {
+//   console.log(d)
+// });
 
+var weaponData;
 d3__WEBPACK_IMPORTED_MODULE_0__.csv("base_weapon_stats.csv", function (d) {
-  console.log(d);
+  return {
+    game: d["Game"],
+    name: d["Name"],
+    type: d["Type"],
+    weaponId: d["Weapon ID"],
+    classId: d["Class ID"],
+    Accuracy: d["Accuracy"],
+    Damage: d["Damage"],
+    Range: d["Range"],
+    FireRate: d["Fire Rate"],
+    Mobility: d["Mobility"],
+    Control: d["Control"]
+  };
+}).then(function (data) {
+  weaponData = data;
+  createBarPlot(weaponData[0], 0);
+  appendNavs(0);
+  appendLinkTags(0);
+
+  for (var i = 1; i < weaponData.length; i++) {
+    createBarPlot(weaponData[i], i);
+    appendNavs(i);
+    appendLinkTags(i);
+  }
+
+  ;
 });
-d3__WEBPACK_IMPORTED_MODULE_0__.csv("attachment_stats - Sheet1.csv", function (d) {
-  console.log(d);
-});
+
+var createBarPlot = function createBarPlot(weaponData, idx) {
+  var margin = {
+    top: 20,
+    right: 30,
+    bottom: 40,
+    left: 90
+  };
+  var width = 600 - margin.left - margin.right;
+  var height = 450 - margin.top - margin.bottom;
+  var data = Object.values(weaponData).slice(5);
+  var numColumns = 6;
+  var x_axisLength = width;
+  var y_axisLength = height;
+  var targetSVG = "slide-svg-" + idx;
+  var targetSlideRect = "slide-svg-" + idx + "-rect";
+  var xScale = d3__WEBPACK_IMPORTED_MODULE_0__.scaleLinear().domain([0, numColumns]).range([0, width]);
+  var yScale = d3__WEBPACK_IMPORTED_MODULE_0__.scaleLinear().domain([0, 300]).range([height, 0]);
+  var svg = d3__WEBPACK_IMPORTED_MODULE_0__.select("#meta-vis").append("svg").attr("class", "".concat(targetSVG, " hidden")).attr("viewBox", "0 0 650 700").attr("preserveAspectRatio", "xMinYMin meet").append("g").attr("transform", "translate(" + margin.left + ", " + (margin.top + 20) + ")");
+  var xAxis = d3__WEBPACK_IMPORTED_MODULE_0__.axisBottom(xScale).tickSize(0).tickFormat(function (d) {
+    return Object.keys(weaponData).slice(5)[d];
+  });
+  svg.append("g").attr("class", "".concat(targetSVG, "-x-axis x-axis")).attr("transform", "translate(0," + height + ")").transition().duration(1000).call(xAxis);
+  svg.selectAll("x-axis, text").attr("transform", "translate(10, 40)rotate(-42)").style("text-anchor", "start");
+  var yAxis = d3__WEBPACK_IMPORTED_MODULE_0__.axisLeft(yScale).ticks(5);
+  svg.append("g").attr("class", "".concat(targetSVG, "-y-axis y-axis")).attr("transform", "translate(" + (margin.right - 50) + ",0)") // .style('opacity', '0%')
+  .call(yAxis);
+  svg.append("text").attr("transform", "rotate(-90)").attr("class", "y-axis-label").attr("y", -80).attr("x", 0 - height / 2).attr("dy", "1em").style("text-anchor", "middle").text("Base stats of the current meta weapons in Call of Duty: Warzone");
+  svg.append("text").attr("class", "source-text").attr("transform", "translate(0, " + (height + margin.top + 50) + ")").style("text-anchor", "left").text("Source: Call of Duty Warzone");
+  svg.selectAll("rect").data(data).enter().append("rect").attr("class", "".concat(targetSlideRect)).attr("x", function (d, i) {
+    return i * (x_axisLength / numColumns);
+  }).attr("y", function (d) {
+    return yScale(d);
+  }).attr("width", x_axisLength / numColumns - 18).attr("height", function (d) {
+    return height - yScale(d);
+  }).transition().duration(1500);
+}; // vertical data
+// const createBarPlot = (weaponData, idx) => {
+//   let margin = {top: 20, right: 30, bottom: 40, left: 90};
+//   let width = 460 - margin.left - margin.right;
+//   let height = 400 - margin.top - margin.bottom;
+//   let data = Object.values(weaponData).slice(5);
+//   let numRows = 6;
+//   let x_axisLength = width;
+//   let y_axisLength = height;
+//   let targetSVG = "slide-svg-" + idx;
+//   let targetSlideRect = "slide-svg-" + idx + "-rect";
+//   let xScale = d3
+//     .scaleLinear()
+//     .domain([0, 300])
+//     .range([0, width]);
+//   let yScale = d3
+//     .scaleLinear()
+//     .domain([0, numRows])
+//     .range([0, height]);
+//   let svg = d3
+//     .select("#meta-vis")
+//     .append("svg")
+//       .attr("class", `${targetSVG} hidden`)
+//       .attr("viewBox", `0 0 650 700`)
+//       .attr("preserveAspectRatio", "xMinYMin meet")
+//     .append("g")
+//       .attr("transform",
+//             "translate(" + margin.left + ", " + (margin.top + 20) + ")");
+//   let xAxis = d3
+//     .axisBottom(xScale)
+//     .ticks(10);
+//     svg
+//       .append("g")
+//       .attr("class", `${targetSVG}-x-axis x-axis`)
+//       .attr("transform", "translate(0," + height + ")")
+//       .transition()
+//       .duration(500)
+//       .call(xAxis);
+//     svg.selectAll(".x-axis text")
+//       .attr("transform", "translate(-10, 12)rotate(-45)")
+//       .style("text-anchor", "start");
+//   let yAxis = d3 
+//     .axisLeft(yScale)
+//     .tickSize(0)
+//     .tickFormat(function(d) {
+//       return Object.keys(weaponData).slice(5)[d];
+//     });
+//     svg
+//       .append("g")
+//       .attr("class", `${targetSVG}-y-axis y-axis`)
+//       .attr("transform", "translate(0,0)")
+//       .call(yAxis);
+//   svg
+//     .append("text")
+//     .attr("transform", "rotate(-90)")
+//     .attr("class", "y-axis-label")
+//     .attr("y", -80)
+//     .attr("x", 0 - height / 2)
+//     .attr("dy", "1em")
+//     .style("text-anchor", "middle")
+//     .text("Base stats of current meta weapons in Call of Duty: Warzone")
+//   svg
+//     .append("text")
+//     .attr("class", "source-text")
+//     .attr("transform",
+//     "translate(0, " + (height + margin.top + 25) + ")")
+//     .style("text-anchor", "left")
+//     .text("Source: Call of Duty Warzone");
+//   svg
+//     .selectAll("rect")
+//     .data(data)
+//     .enter()
+//     .append("rect")
+//     .attr("class", `${targetSlideRect}`)
+//     .attr("x", 0)
+//     .attr("y", function (d, i) {
+//       return i * (y_axisLength / numRows);
+//     })
+//     .attr("height", 25)
+//     .attr("width", function (d) {
+//       return xScale(d);
+//     })
+//     .transition()
+//     .duration(500);
+// };
+
+
 var activeDropdown = {};
 document.getElementById('muzzle-dropdown').addEventListener('click', showDropdown);
 document.getElementById('barrel-dropdown').addEventListener('click', showDropdown);
@@ -30740,12 +30889,104 @@ window.onclick = function (event) {
   if (!event.target.classList.contains('dropdown-button')) {
     activeDropdown.element.classList.remove('active');
   }
-}; // const options = {
-//   root: null,
-//   rootMargin: '0px',
-//   threshold: 0.75,
-// }
-// const observer = new IntersectionObserver(callback, options);
+};
+
+var appendNavs = function appendNavs(idx) {
+  var sideNavs = document.querySelector('.side-navs');
+  var refLinks = document.createElement('a');
+  var navIconsList = document.createElement('li');
+  refLinks.setAttribute('href', "#weapon-".concat(idx));
+  sideNavs.appendChild(refLinks);
+  navIconsList.setAttribute('id', "side-nav-li-".concat(idx));
+  navIconsList.classList.add('side-nav-li');
+  refLinks.appendChild(navIconsList);
+};
+
+var appendLinkTags = function appendLinkTags(idx) {
+  var weaponContainer = document.getElementById("weapon-".concat(idx, "-container"));
+  var aLink = document.createElement('a');
+  aLink.setAttribute('id', "weapon-".concat(idx));
+  aLink.classList.add('weapon');
+  weaponContainer.appendChild(aLink);
+};
+
+var createObserver = function createObserver(containers) {
+  var options = {
+    root: null,
+    threshold: 1,
+    rootMargin: '0px'
+  };
+
+  for (var i = 0; i < containers.length - 1; i++) {
+    renderSlide(options, containers[i], i);
+  }
+};
+
+window.addEventListener('load', function (e) {
+  var sections = [];
+
+  for (var i = 0; i < 13; i++) {
+    var weaponSection = "#weapon-".concat(i, "-container");
+    var weaponSlide = document.querySelector(weaponSection);
+    sections.push(weaponSlide);
+  }
+
+  createObserver(sections);
+}, false);
+
+var renderSlide = function renderSlide(options, slide, idx) {
+  var handleSlide = function handleSlide(entries, obs) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        document.querySelector(".slide-svg-".concat(idx)).classList.remove('hidden');
+
+        if (document.querySelector(".slide-svg-".concat(idx - 1))) {
+          document.querySelector(".slide-svg-".concat(idx - 1)).classList.add('hidden');
+        }
+
+        ;
+
+        if (document.querySelector(".slide-svg-".concat(idx + 1))) {
+          document.querySelector(".slide-svg-".concat(idx + 1)).classList.add('hidden');
+        }
+
+        ;
+        document.querySelectorAll(".slide-svg-".concat(idx, "-rect")).forEach(function (rect) {
+          rect.classList.add('plot-rect');
+        });
+        d3__WEBPACK_IMPORTED_MODULE_0__.select(".slide-svg-".concat(idx, "-y-axis")).transition().style('opacity', "100%").duration(500);
+        var navIcon = document.getElementById("side-nav-li-".concat(idx));
+        navIcon.classList.add("side-nav-li-".concat(idx));
+
+        if (document.querySelectorAll(".slide-svg-".concat(idx - 1, "-rect"))) {
+          document.querySelectorAll(".slide-svg-".concat(idx - 1, "-rect")).forEach(function (rect) {
+            rect.classList.remove('plot-rect');
+          });
+          d3__WEBPACK_IMPORTED_MODULE_0__.select(".slide-svg-".concat(idx - 1, "-y-axis")).transition().style('opacity', '0%').duration(1500);
+        }
+
+        ;
+
+        if (document.getElementById("side-nav-li-".concat(idx - 1))) {
+          document.getElementById("side-nav-li-".concat(idx - 1)).classList.remove("side-nav-li-".concat(idx - 1));
+        }
+
+        ;
+
+        if (document.querySelectorAll(".slide-svg-".concat(idx + 1, "-rect"))) {
+          document.querySelectorAll(".slide-svg-".concat(idx + 1, "-rect")).forEach(function (rect) {
+            rect.classList.remove('plot-rect');
+          });
+          d3__WEBPACK_IMPORTED_MODULE_0__.select(".slide-svg-".concat(idx + 1, "-y-axis")).transition().style('opacity', '0%').duration(1500);
+          document.getElementById("side-nav-li-".concat(idx + 1)).classList.remove("side-nav-li-".concat(idx + 1));
+        }
+      }
+    });
+  };
+
+  var observer = new IntersectionObserver(handleSlide, options);
+  observer.observe(slide);
+};
 })();
 
 /******/ })()

@@ -1,0 +1,45 @@
+.weapon-summ {
+  display: flex;
+  height: auto;
+  width: 100%;
+  min-height: 600px;
+  /* margin-bottom: 180px; */
+}
+
+.d3-svg-container {
+  width: 80%;
+  height: 100%;
+  display: inline-block;
+  position: fixed;
+  margin-left: 28vw;
+}
+
+.d3-svg-container svg {
+  height: 800px;
+  align-self: center;
+}
+
+
+.slide-svg-0-rect {
+  fill: #53ADA5;
+}
+
+.x-axis {
+  color: white;
+  font-weight: 900;
+  font-size: 11px;
+}
+
+.y-axis path {
+  display: none;
+}
+
+.y-axis {
+  color: #fff;
+  font-weight: 900;
+  font-size: 11px;
+}
+
+.hidden {
+  display: none;
+}
