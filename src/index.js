@@ -12,23 +12,25 @@ d3.csv("base_weapon_stats.csv", d => {
     type: d["Type"],
     weaponId: d["Weapon ID"],
     classId: d["Class ID"],
-    Accuracy: +d["Accuracy"],
-    Damage: +d["Damage"],
-    Range: +d["Range"],
-    FireRate: +d["Fire Rate"],
-    Mobility: +d["Mobility"],
-    Control: +d["Control"]
+    Accuracy: d["Accuracy"],
+    Damage: d["Damage"],
+    Range: d["Range"],
+    FireRate: d["Fire Rate"],
+    Mobility: d["Mobility"],
+    Control: d["Control"]
   };
 }).then(data => {
     weaponData = data;
 
-    createBarPlot(weaponData[0], 0)
+    createBarPlot(weaponData[0], 0);
+    appendNavs(0);
+    appendLinkTags(0);
 
     for (let i = 1; i < weaponData.length; i++) {
-      createBarPlot(weaponData[i], i)
-
-    }
-
+      createBarPlot(weaponData[i], i);
+      appendNavs(i);
+      appendLinkTags(i);
+    };
   });
 
 const createBarPlot = (weaponData, idx) => {
@@ -90,6 +92,7 @@ const createBarPlot = (weaponData, idx) => {
       .append("g")
       .attr("class", `${targetSVG}-y-axis y-axis`)
       .attr("transform", "translate(" + (margin.right - 50) + ",0)")
+      // .style('opacity', '0%')
       .call(yAxis);
 
   svg
@@ -230,6 +233,7 @@ const createBarPlot = (weaponData, idx) => {
 //     .duration(500);
 // };
 
+
 var activeDropdown = {};
 document.getElementById('muzzle-dropdown').addEventListener('click', showDropdown);
 document.getElementById('barrel-dropdown').addEventListener('click', showDropdown);
@@ -277,11 +281,114 @@ window.onclick = function (event) {
   }
 }
 
-// const options = {
-//   root: null,
-//   rootMargin: '0px',
-//   threshold: 0.75,
-// }
+const appendNavs = (idx) => {
+  let sideNavs = document.querySelector('.side-navs');
+  let refLinks = document.createElement('a');
+  let navIconsList = document.createElement('li');
 
-// const observer = new IntersectionObserver(callback, options);
+  refLinks.setAttribute('href', `#weapon-${idx}`);
+  sideNavs.appendChild(refLinks);
+  navIconsList.setAttribute('id', `side-nav-li-${idx}`);
+  navIconsList.classList.add('side-nav-li')
+  refLinks.appendChild(navIconsList);
+}
 
+const appendLinkTags = (idx) => {
+  let weaponContainer = document.getElementById(`weapon-${idx}-container`);
+  let aLink = document.createElement('a');
+
+  aLink.setAttribute('id', `weapon-${idx}`);
+  aLink.classList.add('weapon');
+  weaponContainer.appendChild(aLink);
+}
+
+const createObserver = containers => {
+  let options = {
+    root: null,
+    threshold: 1,
+    rootMargin: '0px'
+  }
+  for (let i = 0; i < containers.length - 1; i++) {
+    renderSlide(options, containers[i], i)
+  }
+}
+
+window.addEventListener('load', (e) => {
+  let sections = [];
+  for (let i = 0; i < 13; i++) {
+    let weaponSection = `#weapon-${i}-container`;
+    let weaponSlide = document.querySelector(weaponSection);
+    sections.push(weaponSlide);
+  }
+  createObserver(sections);
+},
+  false
+)
+
+const renderSlide = (options, slide, idx) => {
+  const handleSlide = (entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        document.querySelector(`.slide-svg-${idx}`).classList.remove('hidden');
+  
+        if (document.querySelector(`.slide-svg-${idx - 1}`)) {
+          document.querySelector(`.slide-svg-${idx - 1}`)
+          .classList.add('hidden')
+        };
+  
+        if (document.querySelector(`.slide-svg-${idx + 1}`)) {
+          document.querySelector(`.slide-svg-${idx + 1}`)
+          .classList.add('hidden')
+        };
+  
+        document.querySelectorAll(`.slide-svg-${idx}-rect`).forEach(rect => {
+          rect.classList.add('plot-rect')
+        });
+  
+        d3.select(`.slide-svg-${idx}-y-axis`)
+          .transition()
+          .style('opacity', `100%`)
+          .duration(500)
+  
+        let navIcon = document.getElementById(`side-nav-li-${idx}`);
+        navIcon.classList.add(`side-nav-li-${idx}`);
+  
+        if (document.querySelectorAll(`.slide-svg-${idx - 1}-rect`)) {
+          document.querySelectorAll(`.slide-svg-${idx - 1}-rect`).forEach(rect => {
+            rect.classList.remove('plot-rect')
+          })
+  
+          d3.select(`.slide-svg-${idx - 1}-y-axis`)
+            .transition()
+            .style('opacity', '0%')
+            .duration(1500)
+        };
+  
+        if (document.getElementById(`side-nav-li-${idx - 1}`)) {
+          document
+            .getElementById(`side-nav-li-${idx - 1}`)
+            .classList.remove(`side-nav-li-${idx - 1}`)
+        };
+  
+        if (document.querySelectorAll(`.slide-svg-${idx + 1}-rect`)) {
+          document
+            .querySelectorAll(`.slide-svg-${idx + 1}-rect`)
+            .forEach(rect => {
+              rect.classList.remove('plot-rect')
+            })
+  
+          d3.select(`.slide-svg-${idx + 1}-y-axis`)
+            .transition()
+            .style('opacity', '0%')
+            .duration(1500)
+          
+          document
+            .getElementById(`side-nav-li-${idx + 1}`)
+            .classList.remove(`side-nav-li-${idx + 1}`)
+        }
+      }
+    })
+  }
+  let observer = new IntersectionObserver(handleSlide, options);
+  observer.observe(slide);
+}

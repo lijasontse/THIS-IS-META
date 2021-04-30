@@ -3,7 +3,7 @@
   height: auto;
   width: 100%;
   min-height: 600px;
-  margin-bottom: 180px;
+  /* margin-bottom: 180px; */
 }
 
 .d3-svg-container {
@@ -16,7 +16,6 @@
 
 .d3-svg-container svg {
   height: 800px;
-  display: flex;
   align-self: center;
 }
 
@@ -41,8 +40,6 @@
   font-size: 11px;
 }
 
-
-/* 
 .hidden {
   display: none;
-} */
+}
