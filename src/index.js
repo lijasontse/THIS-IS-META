@@ -12,12 +12,12 @@ d3.csv("base_weapon_stats.csv", d => {
     type: d["Type"],
     weaponId: d["Weapon ID"],
     classId: d["Class ID"],
-    Accuracy: d["Accuracy"],
-    Damage: d["Damage"],
-    Range: d["Range"],
-    FireRate: d["Fire Rate"],
-    Mobility: d["Mobility"],
-    Control: d["Control"]
+    accuracy: d["Accuracy"],
+    damage: d["Damage"],
+    range: d["Range"],
+    fireRate: d["Fire Rate"],
+    mobility: d["Mobility"],
+    control: d["Control"]
   };
 }).then(data => {
     weaponData = data;
@@ -34,9 +34,9 @@ d3.csv("base_weapon_stats.csv", d => {
   });
 
 const createBarPlot = (weaponData, idx) => {
-  let margin = {top: 20, right: 30, bottom: 40, left: 90};
-  let width = 600 - margin.left - margin.right;
-  let height = 450 - margin.top - margin.bottom;
+  let margin = {top: 5, right: 40, bottom: 5, left: 90};
+  let width = 700 - margin.left - margin.right;
+  let height = 500 - margin.top - margin.bottom;
   let data = Object.values(weaponData).slice(5);
   let numColumns = 6;
 
@@ -109,7 +109,7 @@ const createBarPlot = (weaponData, idx) => {
     .append("text")
     .attr("class", "source-text")
     .attr("transform",
-    "translate(0, " + (height + margin.top + 50) + ")")
+    "translate(0, " + (height + margin.top + 70) + ")")
     .style("text-anchor", "left")
     .text("Source: Call of Duty Warzone");
 
@@ -122,12 +122,12 @@ const createBarPlot = (weaponData, idx) => {
 
 
   .attr("x", function (d, i) {
-    return i * (x_axisLength / numColumns);
+    return i * (x_axisLength / numColumns) + 12;
   })
   .attr("y", function (d) {
     return yScale(d);
   })
-  .attr("width", x_axisLength / numColumns - 18)
+  .attr("width", x_axisLength / numColumns - 45)
   .attr("height", function (d) {
     return height - yScale(d);
   })
@@ -305,7 +305,7 @@ const appendLinkTags = (idx) => {
 const createObserver = containers => {
   let options = {
     root: null,
-    threshold: 1,
+    threshold: 0.8,
     rootMargin: '0px'
   }
   for (let i = 0; i < containers.length - 1; i++) {
@@ -361,7 +361,7 @@ const renderSlide = (options, slide, idx) => {
           d3.select(`.slide-svg-${idx - 1}-y-axis`)
             .transition()
             .style('opacity', '0%')
-            .duration(1500)
+            .duration(700)
         };
   
         if (document.getElementById(`side-nav-li-${idx - 1}`)) {
@@ -380,7 +380,7 @@ const renderSlide = (options, slide, idx) => {
           d3.select(`.slide-svg-${idx + 1}-y-axis`)
             .transition()
             .style('opacity', '0%')
-            .duration(1500)
+            .duration(700)
           
           document
             .getElementById(`side-nav-li-${idx + 1}`)

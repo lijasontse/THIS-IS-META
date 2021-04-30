@@ -1,125 +1,270 @@
-/* .btn {
-  border: none;
-  outline: none;
-  padding: 10px 16px;
-  background-color: darkslategray;
-  color: white;
-}
-
-.active, .btn:hover {
-  background-color: #92bbc2;
-  color: #969696;
-} */
-
-/* .nav-buttons {
+.side-navs {
+  position: fixed;
+  bottom: 0;
+  top: 173px;
+  right: 110px;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-around;
-  text-align: center;
-  width: 100%;
-} */
-
-/* .nav-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-content: space-between;
-} */
-
-.all-dropdown-container {
-  display: flex;
-  height: fit-content;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  /* position: relative; */
-  width: 100%;
-  /* background-color: transparent; */
-}
-
-/* .second-container { */
-  /* display: flex; */
-  /* margin-top: 42px; */
-/* } */
-
-.dropdown {
-  display: inline-block;
-  position: relative;
-  margin: 8px;
-  /* font-size: 11px; */
-}
-
-.dropdown-button {
-  /* background: #3498db; */
-  color: #2674A3;
-  letter-spacing: 00.025rem;
-  box-sizing: border-box;
-  padding: 0px 5px;
-  text-align: center;
-  /* border-bottom: 1px solid #828F77; */
-  position: relative;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.dropdown-button:hover {
-  color: azure;
-  transition: color 1s ease;
-}
-
-.dropdown ul.active {
-  visibility: visible;
-  transition: all .3s ease;
-  transform: scaleY(1);
-  text-align: start;
-  /* position: absolute; */
+  height: 600px;
   z-index: 1;
-  background-color: rgb(7, 16, 18);
-}
-
-.dropdown-selection {
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.dropdown ul {
-  visibility: hidden;
-  overflow: hidden;
-  color: #828F77;
-  transform-origin:top;
-  padding: 0;
-  list-style: none;
-  transform:scaleY(0);
-  /* box-shadow:0px 2px 6px 0 rgba(0,0,0,0.2); */
-  position:absolute;
-  left: 0;
-  margin-top: 2px;
-  top: 100%;
-  min-width: 150%;
-  transition: all .3s ease;
-}
-
-.dropdown li {
-  padding: 3px 5px;
-  cursor: pointer;
-  /* transition: color .2s ease; */
-  position: relative;
-}
-
-.dropdown li.check {
-  color: rgb(189, 84, 75);
-}
-
-.dropdown li:hover {
-  color: #f6f6f6;
-  transition: color .2s ease;
 } 
 
-.triangle {
-  font-size: 60%;
-  color:#fff;
-  margin-left: 5px;
+.side-nav-li {
+  height: 55px;
+  width: 160px;
+  border-radius: 0px;
+  border-bottom: 1px solid #969696;
+  margin-bottom: 10px;
+  background-color: transparent;
 }
 
+.side-nav-li:hover {
+  opacity: 70%;
+}
+
+/* AMAX */
+.side-nav-li-0, 
+#side-nav-li-0:hover {
+  background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/amax.jpeg");
+  background-size: 10rem;
+  background-repeat: no-repeat;
+}
+
+.side-nav-li-1,
+#side-nav-li-1:hover  {
+  background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/grau.jpeg");
+  background-size: 10rem;
+  background-repeat: no-repeat;
+}
+
+.side-nav-li-2,
+#side-nav-li-2:hover  {
+  background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/mp5.jpeg");
+  background-size: 10rem;
+  background-repeat: no-repeat;
+}
+
+.side-nav-li-3,
+#side-nav-li-3:hover  {
+  background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/fennec.jpeg");
+  background-size: 10rem;
+  background-repeat: no-repeat;
+  height: 70px;
+}
+
+.side-nav-li-4,
+#side-nav-li-4:hover  {
+  background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/kar.jpeg");
+  background-size: 10rem;
+  background-repeat: no-repeat;
+  height: 40px;
+}
+
+.side-nav-li-5,
+#side-nav-li-5:hover  {
+  background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/new_mac.png");
+  background-size: 10rem;
+  background-repeat: no-repeat;
+  height: 85px;
+}
+
+.side-nav-li-6,
+#side-nav-li-6:hover  {
+  background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/ffar.gif");
+  background-size: 10rem;
+  background-repeat: no-repeat;
+}
+
+.side-nav-li-7,
+#side-nav-li-7:hover  {
+  background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/new_aug.png");
+  background-size: 10rem;
+  background-repeat: no-repeat;
+  height: 58px;
+}
+
+.side-nav-li-8,
+#side-nav-li-8:hover  {
+  background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/tundrapurple.gif");
+  background-size: 10rem;
+  background-repeat: no-repeat;
+  height: 45px;
+}
+
+.side-nav-li-9,
+#side-nav-li-9:hover  {
+  background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/bullfrog.gif");
+  background-size: 10rem;
+  background-repeat: no-repeat;
+}
+
+.side-nav-li-10,
+#side-nav-li-10:hover  {
+  background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/stoner.gif");
+  background-size: 10rem;
+  background-repeat: no-repeat;
+}
+
+.side-nav-li-11,
+#side-nav-li-11:hover  {
+  background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/gallo.gif");
+  background-size: 10rem;
+  background-repeat: no-repeat;
+}
+
+.side-nav-li:after {
+  position: absolute;
+  opacity: 0%;
+  width: auto;
+  color: white;
+  left: 175px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.side-nav-li:hover:after {
+  opacity: 70%;
+}
+
+#side-nav-li-0:after {
+  content: "CR-56 AMAX";
+  padding-top: 9px;
+  color: #9B786F;
+}
+
+.side-nav-li-0:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-1:after {
+  content: "GRAU 5.56";
+  text-align: center;
+  padding-top: 5px;
+  color: rgb(136, 131, 136);
+}
+
+.side-nav-li-1:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-2:after {
+  content: "MP5";
+  padding-top: 15px;
+  color: #B1A296;
+}
+
+.side-nav-li-2:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-3:after {
+  content: "FENNEC";
+  padding-top: 24px;
+  color: #AAA0A0;
+}
+
+.side-nav-li-3:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-4:after {
+  content: "KAR 98K";
+  text-align: center;
+  width: 70px;
+  padding-top: 8px;
+  color: #8e8268;
+}
+
+.side-nav-li-4:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-5:after {
+  content: "MAC-10";
+  width: 65px;
+  padding-top: 30px;
+  color: #A7B3A5;
+}
+
+.side-nav-li-5:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-6:after {
+  content: "FFAR 1";
+  width: 55px;
+  padding-top: 16px;
+  color: #96858F;
+}
+
+.side-nav-li-6:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-7:after {
+  content: "AUG";
+  padding-top: 16px;
+  color: #7395AE;
+}
+
+.side-nav-li-7:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-8:after {
+  content: "LW3-TUNDRA";
+  text-align: center;
+  color: #1C3334;
+}
+
+.side-nav-li-8:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-9:after {
+  content: "BULLFROG";
+  margin-left: -6px;
+  padding-top: 16px;
+  color: #254E58;
+}
+
+.side-nav-li-9:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-10:after {
+  content: "STONER 63";
+  width: 93px;
+  margin-left: -6px;
+  padding-top: 15px; 
+  color: #112D32;
+}
+
+.side-nav-li-10:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-11:after {
+  content: "GALLO SA12";
+  text-align: center;
+  padding-top: 5px;
+  color: #29648A;
+}
+
+.side-nav-li-11:after {
+  opacity: 100%;
+  position: absolute;
+}
