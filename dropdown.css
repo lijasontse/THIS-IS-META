@@ -9,6 +9,7 @@
   width: 100%;
   margin-left: 170px;
   /* background-color: transparent; */
+  z-index: 1;
 }
 
 /* .second-container { */

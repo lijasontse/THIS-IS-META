@@ -2,12 +2,13 @@
   position: fixed;
   bottom: 0;
   top: 173px;
-  right: 100px;
+  right: 110px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 600px;
+  z-index: 1;
 } 
 
 .side-nav-li {
@@ -111,4 +112,146 @@
   background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/gallo.gif");
   background-size: 10rem;
   background-repeat: no-repeat;
+}
+
+.side-nav-li:after {
+  position: absolute;
+  opacity: 0%;
+  width: auto;
+  color: white;
+  left: 175px;
+}
+
+.side-nav-li:hover:after {
+  opacity: 50%;
+}
+
+#side-nav-li-0:after {
+  content: "CR-56 AMAX";
+  padding-top: 5px;
+}
+
+.side-nav-li-0:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-1:after {
+  content: "GRAU 5.56";
+  text-align: center;
+  padding-top: 5px;
+}
+
+.side-nav-li-1:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-2:after {
+  content: "MP5";
+  padding-top: 15px;
+}
+
+.side-nav-li-2:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-3:after {
+  content: "FENNEC";
+  padding-top: 24px;
+
+}
+
+.side-nav-li-3:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-4:after {
+  content: "KAR 98K";
+  text-align: center;
+  width: 70px;
+  padding-top: 8px;
+}
+
+.side-nav-li-4:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-5:after {
+  content: "MAC-10";
+  width: 65px;
+  padding-top: 30px;
+}
+
+.side-nav-li-5:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-6:after {
+  content: "FFAR 1";
+  width: 53px;
+  padding-top: 16px;
+}
+
+.side-nav-li-6:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-7:after {
+  content: "AUG";
+  padding-top: 16px;
+}
+
+.side-nav-li-7:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-8:after {
+  content: "LW3-TUNDRA";
+  text-align: center;
+}
+
+.side-nav-li-8:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-9:after {
+  content: "BULLFROG";
+  margin-left: -4px;
+  padding-top: 16px;
+}
+
+.side-nav-li-9:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-10:after {
+  content: "STONER 63";
+  width: 91px;
+  margin-left: -4px;
+  padding-top: 15px;
+}
+
+.side-nav-li-10:after {
+  opacity: 100%;
+  position: absolute;
+}
+
+#side-nav-li-11:after {
+  content: "GALLO SA12";
+  text-align: center;
+  padding-top: 5px;
+}
+
+.side-nav-li-11:after {
+  opacity: 100%;
+  position: absolute;
 }
