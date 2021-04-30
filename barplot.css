@@ -2,8 +2,8 @@
   display: flex;
   height: auto;
   width: 100%;
-  min-height: 690px;
-  margin-bottom: 45px;
+  min-height: 880px;
+  /* margin-bottom: 150px; */
 }
 
 .d3-svg-container {
@@ -15,32 +15,91 @@
 }
 
 .d3-svg-container svg {
-  height: 95vh;
+  height: 101vh;
   width: auto;
   align-self: center;
 }
 
-.slide-svg-0-rect {
-  fill: #53ADA5;
-}
-
 .x-axis {
-  color: white;
+  color: #687864;
   font-weight: 900;
   font-size: 11px;
   text-transform: capitalize;
 }
+
+.x-axis path {
+  color: white;
+}
+
 
 .y-axis path {
   display: none;
 }
 
 .y-axis {
-  color: #fff;
+  color: #687864;
   font-weight: 900;
   font-size: 11px;
 }
 
+.y-axis-label {
+  fill: #557A95;
+  font-size: 16px;
+}
+
+.source-text {
+  fill: #557A95;
+}
+
 .hidden {
   display: none;
+}
+
+.slide-svg-0-rect {
+  fill: #9B786F;
+}
+
+.slide-svg-1-rect {
+  fill: rgb(136, 131, 136);
+}
+
+.slide-svg-2-rect {
+  fill: #B1A296;
+}
+
+.slide-svg-3-rect {
+  fill: #AAA0A0;
+}
+
+.slide-svg-4-rect {
+  fill: #8e8268;
+}
+
+.slide-svg-5-rect {
+  fill: #A7B3A5;
+}
+
+.slide-svg-7-rect {
+  fill: #7395AE;
+}
+
+
+.slide-svg-6-rect {
+  fill: #96858F;
+}
+
+.slide-svg-8-rect {
+  fill: #1C3334;
+}
+
+.slide-svg-9-rect {
+  fill: #254E58;
+}
+
+.slide-svg-10-rect {
+  fill: #112D32;
+}
+
+.slide-svg-11-rect {
+  fill: #29648A;
 }

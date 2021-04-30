@@ -21,7 +21,7 @@
 }
 
 .side-nav-li:hover {
-  opacity: 40%;
+  opacity: 70%;
 }
 
 /* AMAX */
@@ -120,15 +120,18 @@
   width: auto;
   color: white;
   left: 175px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .side-nav-li:hover:after {
-  opacity: 50%;
+  opacity: 70%;
 }
 
 #side-nav-li-0:after {
   content: "CR-56 AMAX";
-  padding-top: 5px;
+  padding-top: 9px;
+  color: #9B786F;
 }
 
 .side-nav-li-0:after {
@@ -140,6 +143,7 @@
   content: "GRAU 5.56";
   text-align: center;
   padding-top: 5px;
+  color: rgb(136, 131, 136);
 }
 
 .side-nav-li-1:after {
@@ -150,6 +154,7 @@
 #side-nav-li-2:after {
   content: "MP5";
   padding-top: 15px;
+  color: #B1A296;
 }
 
 .side-nav-li-2:after {
@@ -160,7 +165,7 @@
 #side-nav-li-3:after {
   content: "FENNEC";
   padding-top: 24px;
-
+  color: #AAA0A0;
 }
 
 .side-nav-li-3:after {
@@ -173,6 +178,7 @@
   text-align: center;
   width: 70px;
   padding-top: 8px;
+  color: #8e8268;
 }
 
 .side-nav-li-4:after {
@@ -184,6 +190,7 @@
   content: "MAC-10";
   width: 65px;
   padding-top: 30px;
+  color: #A7B3A5;
 }
 
 .side-nav-li-5:after {
@@ -193,8 +200,9 @@
 
 #side-nav-li-6:after {
   content: "FFAR 1";
-  width: 53px;
+  width: 55px;
   padding-top: 16px;
+  color: #96858F;
 }
 
 .side-nav-li-6:after {
@@ -205,6 +213,7 @@
 #side-nav-li-7:after {
   content: "AUG";
   padding-top: 16px;
+  color: #7395AE;
 }
 
 .side-nav-li-7:after {
@@ -215,6 +224,7 @@
 #side-nav-li-8:after {
   content: "LW3-TUNDRA";
   text-align: center;
+  color: #1C3334;
 }
 
 .side-nav-li-8:after {
@@ -224,8 +234,9 @@
 
 #side-nav-li-9:after {
   content: "BULLFROG";
-  margin-left: -4px;
+  margin-left: -6px;
   padding-top: 16px;
+  color: #254E58;
 }
 
 .side-nav-li-9:after {
@@ -235,9 +246,10 @@
 
 #side-nav-li-10:after {
   content: "STONER 63";
-  width: 91px;
-  margin-left: -4px;
-  padding-top: 15px;
+  width: 93px;
+  margin-left: -6px;
+  padding-top: 15px; 
+  color: #112D32;
 }
 
 .side-nav-li-10:after {
@@ -249,6 +261,7 @@
   content: "GALLO SA12";
   text-align: center;
   padding-top: 5px;
+  color: #29648A;
 }
 
 .side-nav-li-11:after {
