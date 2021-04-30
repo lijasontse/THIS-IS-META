@@ -86,6 +86,7 @@
 .weapon-contents {
   font-size: 24px;
   margin-top: 10px;
+  width: 300px;
 }
 
 .damage-profile {
@@ -121,4 +122,7 @@
   color: #6b7f83;
 }
 
-
+tr {
+  display: flex;
+  justify-content: space-between;
+}
