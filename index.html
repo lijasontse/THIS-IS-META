@@ -11,6 +11,7 @@
   <link rel="stylesheet" type="text/css" href="./reset.css" />
   <link rel="stylesheet" type="text/css" href="./sidebar.css" />
   <link rel="stylesheet" type="text/css" href="./barplot.css" />
+  <link rel="stylesheet" type="text/css" href="./dropdown.css" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
@@ -131,6 +132,7 @@
                 </div>
               </div>
             </div>
+            <div class="d3-svg-container" id="meta-vis"></div>
             <div class="weapon-summ" id="weapon-0-container">
               <div class="weapon-slides-wrapper">
                 <div class="weapon-img">
@@ -191,7 +193,7 @@
                   </table>
                 </div>
               </div>
-              <div class="d3-svg-container" id="meta-vis"></div>
+              <!-- <div class="d3-svg-container" id="meta-vis"></div> -->
             </div>
 
             <div class="weapon-summ" id=weapon-1-container>
@@ -437,7 +439,7 @@
               <div class="weapon-slides-wrapper">
                 <div class="weapon-img">
                   MAC-10
-                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/mac10.gif">
+                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/new_mac.png">
                   <div class="weapon-desc">
                     "Full-auto submachine gun. Fastest fire rate in class with higher vertical recoil. 
                     Improved handling speeds with reduced damage."
@@ -558,7 +560,7 @@
               <div class="weapon-slides-wrapper">
                 <div class="weapon-img">
                   AUG
-                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/augblossom.gif">
+                  <img src="https://meta-image.s3-us-west-1.amazonaws.com/new_aug.png">
                   <div class="weapon-desc">
                     "Burst fire tactical rifle. High damage with moderate recoil and slower movement speeds when firing. 
                     Built in optic provides 1.5x magnification."
@@ -857,95 +859,10 @@
                 </div>
               </div>  
             </div>
-
           </div>
+          <ul class="side-navs"></ul>
         </div>
       </div>
-
-      <!-- <div class="all-dropdown-container">
-        <div class='first-container'>
-  
-          <div class='dropdown' id='muzzle-dropdown'>
-            <div class='dropdown-button'>MUZZLE
-              <span class='triangle'>&#9660;</span>
-            </div>
-            <ul class='dropdown-selection'>
-              <li>MONOLITHIC SUPPRESSOR</li>
-            </ul>
-          </div>
-  
-          <div class='dropdown' id='barrel-dropdown'>
-            <div class='dropdown-button'>BARREL
-              <span class='triangle'>&#9660;</span>
-            </div>
-            <ul class='dropdown-selection'>
-              <li>XRK ZODIAC S440</li>
-              <li>XRK ZODIAC S440</li>
-              <li>XRK ZODIAC S440</li>
-
-            </ul>
-          </div>
-  
-          <div class='dropdown' id='laser-dropdown'>
-            <div class='dropdown-button'>LASER
-              <span class='triangle'>&#9660;</span>
-            </div>
-            <ul class='dropdown-selection'>
-              <li></li>
-            </ul>
-          </div>
-  
-          <div class='dropdown' id='optic-dropdown'>
-            <div class='dropdown-button'>OPTIC
-              <span class='triangle'>&#9660;</span>
-            </div>
-            <ul class='dropdown-selection'>
-              <li></li>
-            </ul>
-          </div>
-  
-          <div class='dropdown' id='stock-dropdown'>
-            <div class='dropdown-button'>STOCK
-              <span class='triangle'>&#9660;</span>
-            </div>
-            <ul class='dropdown-selection'>
-              <li></li>
-            </ul>
-          </div>  
-        </div>
-  
-        <div class="second-container">
-          <div class='dropdown' id='underbarrel-dropdown'>
-            <div class='dropdown-button'>UNDERBARREL
-              <span class='triangle'>&#9660;</span>
-            </div>
-            <ul class='dropdown-selection'>
-              <li></li>
-            </ul>
-          </div>
-    
-          <div class='dropdown' id='ammo-dropdown'>
-            <div class='dropdown-button'>AMMUNITION
-              <span class='triangle'>&#9660;</span>
-            </div>
-            <ul class='dropdown-selection'>
-              <li></li>
-            </ul>
-          </div>
-    
-          <div class='dropdown' id='reargrip-dropdown'>
-            <div class='dropdown-button'>REAR GRIP
-              <span class='triangle'>&#9660;</span>
-            </div>
-            <ul class='dropdown-selection'>
-              <li></li>
-            </ul>
-          </div>
-        </div>
-      </div> -->
-      
-
-      <ul class="side-navs"></ul>
     </div>
   </div>
   <script type="text/javascript" src="./dist/bundle.js"></script>

@@ -30698,12 +30698,12 @@ d3__WEBPACK_IMPORTED_MODULE_0__.csv("base_weapon_stats.csv", function (d) {
     type: d["Type"],
     weaponId: d["Weapon ID"],
     classId: d["Class ID"],
-    Accuracy: d["Accuracy"],
-    Damage: d["Damage"],
-    Range: d["Range"],
-    FireRate: d["Fire Rate"],
-    Mobility: d["Mobility"],
-    Control: d["Control"]
+    accuracy: d["Accuracy"],
+    damage: d["Damage"],
+    range: d["Range"],
+    fireRate: d["Fire Rate"],
+    mobility: d["Mobility"],
+    control: d["Control"]
   };
 }).then(function (data) {
   weaponData = data;
@@ -30722,13 +30722,13 @@ d3__WEBPACK_IMPORTED_MODULE_0__.csv("base_weapon_stats.csv", function (d) {
 
 var createBarPlot = function createBarPlot(weaponData, idx) {
   var margin = {
-    top: 20,
+    top: 87,
     right: 30,
-    bottom: 40,
+    bottom: 20,
     left: 90
   };
-  var width = 600 - margin.left - margin.right;
-  var height = 450 - margin.top - margin.bottom;
+  var width = 650 - margin.left - margin.right;
+  var height = 500 - margin.top - margin.bottom;
   var data = Object.values(weaponData).slice(5);
   var numColumns = 6;
   var x_axisLength = width;
@@ -30747,12 +30747,12 @@ var createBarPlot = function createBarPlot(weaponData, idx) {
   svg.append("g").attr("class", "".concat(targetSVG, "-y-axis y-axis")).attr("transform", "translate(" + (margin.right - 50) + ",0)") // .style('opacity', '0%')
   .call(yAxis);
   svg.append("text").attr("transform", "rotate(-90)").attr("class", "y-axis-label").attr("y", -80).attr("x", 0 - height / 2).attr("dy", "1em").style("text-anchor", "middle").text("Base stats of the current meta weapons in Call of Duty: Warzone");
-  svg.append("text").attr("class", "source-text").attr("transform", "translate(0, " + (height + margin.top + 50) + ")").style("text-anchor", "left").text("Source: Call of Duty Warzone");
+  svg.append("text").attr("class", "source-text").attr("transform", "translate(0, " + (height + margin.top - 15) + ")").style("text-anchor", "left").text("Source: Call of Duty Warzone");
   svg.selectAll("rect").data(data).enter().append("rect").attr("class", "".concat(targetSlideRect)).attr("x", function (d, i) {
     return i * (x_axisLength / numColumns);
   }).attr("y", function (d) {
     return yScale(d);
-  }).attr("width", x_axisLength / numColumns - 18).attr("height", function (d) {
+  }).attr("width", x_axisLength / numColumns - 25).attr("height", function (d) {
     return height - yScale(d);
   }).transition().duration(1500);
 }; // vertical data
@@ -30962,7 +30962,7 @@ var renderSlide = function renderSlide(options, slide, idx) {
           document.querySelectorAll(".slide-svg-".concat(idx - 1, "-rect")).forEach(function (rect) {
             rect.classList.remove('plot-rect');
           });
-          d3__WEBPACK_IMPORTED_MODULE_0__.select(".slide-svg-".concat(idx - 1, "-y-axis")).transition().style('opacity', '0%').duration(1500);
+          d3__WEBPACK_IMPORTED_MODULE_0__.select(".slide-svg-".concat(idx - 1, "-y-axis")).transition().style('opacity', '0%').duration(700);
         }
 
         ;
@@ -30977,7 +30977,7 @@ var renderSlide = function renderSlide(options, slide, idx) {
           document.querySelectorAll(".slide-svg-".concat(idx + 1, "-rect")).forEach(function (rect) {
             rect.classList.remove('plot-rect');
           });
-          d3__WEBPACK_IMPORTED_MODULE_0__.select(".slide-svg-".concat(idx + 1, "-y-axis")).transition().style('opacity', '0%').duration(1500);
+          d3__WEBPACK_IMPORTED_MODULE_0__.select(".slide-svg-".concat(idx + 1, "-y-axis")).transition().style('opacity', '0%').duration(700);
           document.getElementById("side-nav-li-".concat(idx + 1)).classList.remove("side-nav-li-".concat(idx + 1));
         }
       }

@@ -2,23 +2,23 @@
   display: flex;
   height: auto;
   width: 100%;
-  min-height: 600px;
-  /* margin-bottom: 180px; */
+  min-height: 690px;
+  margin-bottom: 45px;
 }
 
 .d3-svg-container {
-  width: 80%;
   height: 100%;
   display: inline-block;
   position: fixed;
   margin-left: 28vw;
+  background-color: transparent;
 }
 
 .d3-svg-container svg {
-  height: 800px;
+  height: 95vh;
+  width: auto;
   align-self: center;
 }
-
 
 .slide-svg-0-rect {
   fill: #53ADA5;
@@ -28,6 +28,7 @@
   color: white;
   font-weight: 900;
   font-size: 11px;
+  text-transform: capitalize;
 }
 
 .y-axis path {
