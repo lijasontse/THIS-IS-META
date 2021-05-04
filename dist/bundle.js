@@ -30686,9 +30686,164 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
- // d3.csv("attachment_stats - Sheet1.csv", d => {
-//   console.log(d)
+ // var joinedData;
+// d3.csv("joined_data_u.csv", d => {
+//   return {
+//     game: d["Game"],
+//     name: d["Name"],
+//     weaponId: d["Weapon ID"],
+//     classId: d["Class ID"],
+//     type: d["Type"],
+//     accuracy: d["Accuracy"],
+//     damage: d["Damage"],
+//     range: d["Range"],
+//     fireRate: d["Fire Rate"],
+//     mobility: d["Mobility"],
+//     control: d["Control"]
+//   };
+// }).then(data => {
+//     joinedData = data;
+//     var baseData = [];
+//     var metaData = [];
+//     // createBarPlot(joinedData[0], 0)
+//     // appendNavs(0);
+//     // appendLinkTags(0);
+//     for (var i = 0; i < joinedData.length; i++) {
+//       if (joinedData[i]["type"] === "Base") {
+//         baseData.push(joinedData[i]);
+//       } else {
+//         metaData.push(joinedData[i]);
+//       }
+//     }
+//     // for (let i = 1; i < baseData.length; i++) {
+//     //   createBarPlot(baseData[i], [i])
+//     //   appendNavs(i);
+//     //   appendLinkTags(i);
+//     // }
+//     for (let i = 0; i < metaData.length; i++) {
+//       createBarPlot(metaData[i], [i])
+//       appendNavs(i);
+//       appendLinkTags(i);
+//     }
 // });
+// function change(value) {
+//   if (value === "base") {
+//     update(baseData);
+//   } else if (value === 'meta') {
+//     update(metaData);
+//   } else {
+//     update(joinedData);
+//   }
+// }
+// const createBarPlot = (joinedData, idx) => {
+//   var margin = {top: 5, right: 40, bottom: 5, left: 90};
+//   var width = 700 - margin.left - margin.right;
+//   var height = 500 - margin.top - margin.bottom;
+//   var data = Object.values(joinedData).slice(5);
+//   let numColumns = 6;
+//   var x_axisLength = width;
+//   var y_axisLength = height;
+//   var targetSVG = "slide-svg-" + idx;
+//   var xChart = d3
+//     .scaleLinear()
+//     .range([0, width])
+//     .domain([0, numColumns]);
+//   var yChart = d3
+//     .scaleLinear()
+//     .range([height, 0])
+//     .domain([0, 300]);
+//   var svg = d3
+//     .select("#meta-vis")
+//     .append("svg")
+//       .attr("class", `${targetSVG} hidden`)
+//       .attr("viewBox", `0 0 650 700`)
+//       .attr("preserveAspectRatio", "xMinYMin meet")
+//     .append("g")
+//       .attr("transform",
+//             "translate(" + margin.left + ", " + (margin.top + 20) + ")");
+//   var xAxis = d3
+//     .axisBottom(xChart)
+//     .tickSize(0)
+//     .tickFormat(function (d) {
+//       return Object.keys(joinedData).slice(5)[d];
+//   });
+//   svg
+//     .append("g")
+//     .attr("class", `${targetSVG}-x-axis x-axis`)
+//     .attr("transform", "translate(0," + height + ")")
+//     .transition()
+//     .duration(1000)
+//     .call(xAxis);
+//   svg.selectAll("x-axis, text")
+//     .attr("transform", "translate(10, 40)rotate(-42)")
+//     .style("text-anchor", "start");
+//   var yAxis = d3
+//     .axisLeft(yChart)
+//     .ticks(5);
+//     svg
+//       .append("g")
+//       .attr("class", `${targetSVG}-y-axis y-axis`)
+//       .attr("transform", "translate(" + (margin.right - 50) + ",0)")
+//       // .style('opacity', '0%')
+//       .call(yAxis);
+//   svg
+//   .append("text")
+//   .attr("transform", "rotate(-90)")
+//   .attr("class", "y-axis-label")
+//   .attr("y", -80)
+//   .attr("x", 0 - height / 2)
+//   .attr("dy", "1em")
+//   .style("text-anchor", "middle")
+//   .text("Base stats of the current meta weapons in Call of Duty: Warzone")
+//   svg
+//     .append("text")
+//     .attr("class", "source-text")
+//     .attr("transform",
+//     "translate(0, " + (height + margin.top + 70) + ")")
+//     .style("text-anchor", "left")
+//     .text("Source: Call of Duty Warzone");
+//   const update = (data, idx) => {
+//     let numColumns = 6;
+//     xChart.domain([0, numColumns]);
+//     yChart.domain([0, 300]);
+//     let targetSlideRect = "slide-svg-" + idx + "-rect";
+//     let barWidth = x_axisLength / numColumns;
+//     let updatedRects = svg
+//     .selectAll('rect')
+//     .remove()
+//     .exit()
+//     .data(data)
+//     debugger
+//     updatedRects.enter()
+//       .append("rect")
+//       .attr("class", `${targetSlideRect}`)
+//       .attr("x", function (d, i) {
+//         return i * (barWidth) + 12;
+//       })
+//       .attr("y", function (d) {
+//         return yChart(d)
+//       })
+//       .attr("height", function (d) {
+//         return height - yChart(d)
+//       })
+//       .attr("width", barWidth - 45)
+//       .attr("fill", function (d) {
+//         if (d.type === "base") {
+//           return "rgb(251,180,174)";
+//         } else {
+//           return "rgb(179,205,227)";
+//         }
+//       })
+//     svg.select(`.slide-svg-${idx}-y-axis`).call(yAxis)
+//     svg.select(`.slide-svg-${idx}-x-axis`).call(xAxis)
+//       .selectAll("text")
+//       .style("text-anchor", "end")
+//       .attr("transform", function (d) {
+//         return "rotate(-65)";
+//       });
+//   }
+//   update(joinedData);
+// }
 
 var weaponData;
 d3__WEBPACK_IMPORTED_MODULE_0__.csv("base_weapon_stats.csv", function (d) {
@@ -30755,92 +30910,7 @@ var createBarPlot = function createBarPlot(weaponData, idx) {
   }).attr("width", x_axisLength / numColumns - 45).attr("height", function (d) {
     return height - yScale(d);
   }).transition().duration(1500);
-}; // vertical data
-// const createBarPlot = (weaponData, idx) => {
-//   let margin = {top: 20, right: 30, bottom: 40, left: 90};
-//   let width = 460 - margin.left - margin.right;
-//   let height = 400 - margin.top - margin.bottom;
-//   let data = Object.values(weaponData).slice(5);
-//   let numRows = 6;
-//   let x_axisLength = width;
-//   let y_axisLength = height;
-//   let targetSVG = "slide-svg-" + idx;
-//   let targetSlideRect = "slide-svg-" + idx + "-rect";
-//   let xScale = d3
-//     .scaleLinear()
-//     .domain([0, 300])
-//     .range([0, width]);
-//   let yScale = d3
-//     .scaleLinear()
-//     .domain([0, numRows])
-//     .range([0, height]);
-//   let svg = d3
-//     .select("#meta-vis")
-//     .append("svg")
-//       .attr("class", `${targetSVG} hidden`)
-//       .attr("viewBox", `0 0 650 700`)
-//       .attr("preserveAspectRatio", "xMinYMin meet")
-//     .append("g")
-//       .attr("transform",
-//             "translate(" + margin.left + ", " + (margin.top + 20) + ")");
-//   let xAxis = d3
-//     .axisBottom(xScale)
-//     .ticks(10);
-//     svg
-//       .append("g")
-//       .attr("class", `${targetSVG}-x-axis x-axis`)
-//       .attr("transform", "translate(0," + height + ")")
-//       .transition()
-//       .duration(500)
-//       .call(xAxis);
-//     svg.selectAll(".x-axis text")
-//       .attr("transform", "translate(-10, 12)rotate(-45)")
-//       .style("text-anchor", "start");
-//   let yAxis = d3 
-//     .axisLeft(yScale)
-//     .tickSize(0)
-//     .tickFormat(function(d) {
-//       return Object.keys(weaponData).slice(5)[d];
-//     });
-//     svg
-//       .append("g")
-//       .attr("class", `${targetSVG}-y-axis y-axis`)
-//       .attr("transform", "translate(0,0)")
-//       .call(yAxis);
-//   svg
-//     .append("text")
-//     .attr("transform", "rotate(-90)")
-//     .attr("class", "y-axis-label")
-//     .attr("y", -80)
-//     .attr("x", 0 - height / 2)
-//     .attr("dy", "1em")
-//     .style("text-anchor", "middle")
-//     .text("Base stats of current meta weapons in Call of Duty: Warzone")
-//   svg
-//     .append("text")
-//     .attr("class", "source-text")
-//     .attr("transform",
-//     "translate(0, " + (height + margin.top + 25) + ")")
-//     .style("text-anchor", "left")
-//     .text("Source: Call of Duty Warzone");
-//   svg
-//     .selectAll("rect")
-//     .data(data)
-//     .enter()
-//     .append("rect")
-//     .attr("class", `${targetSlideRect}`)
-//     .attr("x", 0)
-//     .attr("y", function (d, i) {
-//       return i * (y_axisLength / numRows);
-//     })
-//     .attr("height", 25)
-//     .attr("width", function (d) {
-//       return xScale(d);
-//     })
-//     .transition()
-//     .duration(500);
-// };
-
+};
 
 var activeDropdown = {};
 document.getElementById('muzzle-dropdown').addEventListener('click', showDropdown);

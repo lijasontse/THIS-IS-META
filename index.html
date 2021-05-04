@@ -13,6 +13,12 @@
   <link rel="stylesheet" type="text/css" href="./barplot.css" />
   <link rel="stylesheet" type="text/css" href="./dropdown.css" />
 
+  <meta property="og:title" content="THIS IS META" />
+  <meta property="og:image" name="image" content="thisismeta_pic.png" />
+  <meta property="og:description"
+    content="An data visualizer directly in the browser built with vanilla JavaScript and D3.js" />
+  <meta property="og:url" content="https://lijasontse.github.io/THIS-IS-META/" />
+
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Teko:wght@500&display=swap"
@@ -201,6 +207,17 @@
                     </tbody>
                   </table>
                 </div>
+              </div>
+              <div class="radio">
+                <label class="radio-inline">
+                  <input type="radio" name="joined" value="base" onclick=`change(this.value)`> Base
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="joined" value="meta" onclick=`change(this.value)`> Meta
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="joined" value="join" onclick=`change(this.value)` checked>
+                </label>
               </div>
               <div class="d3-svg-container" id="meta-vis"></div>
             </div>

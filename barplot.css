@@ -103,3 +103,7 @@
 .slide-svg-11-rect {
   fill: #29648A;
 }
+
+.radio {
+  z-index: 1;
+}
