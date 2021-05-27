@@ -13,7 +13,7 @@ I, myself, have really enjoyed playing this game since its launch back in March 
 Users of the THIS IS META data visualizer are able to:
 
 * Scroll through the list of the current meta weapons (12 total)
-* Click on a button that will update the bar chart with statistics of the meta weapon with the best attachments
+* Click on drop down list and it will show the best attachments to use for the weapon
 * Toggle through the visualization with the navigation icons on the right side 
 * View and hover over statistics rendered on the bar chart 
 
