@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>THIS IS META!</title>
 
@@ -37,7 +38,7 @@
       <div class="header-title">
         <span class="title">THIS... IS... META !</span>
       </div>
-      
+
       <div class="header-about-me">
         <div>
           <a href="https://github.com/lijasontse" class="about-me-link" target="_blank">
@@ -57,89 +58,10 @@
       <div class="all-weapons">
         <div class="weapons-container">
           <div class="weapons-index">
-            <div class="all-dropdown-container">
-              <div class='first-container'>
-            
-                <div class='dropdown' id='muzzle-dropdown'>
-                  <div class='dropdown-button'>MUZZLE
-                    <span class='triangle'>&#9660;</span>
-                  </div>
-                  <ul class='dropdown-selection'>
-                    <li>MONOLITHIC SUPPRESSOR</li>
-                  </ul>
-                </div>
-            
-                <div class='dropdown' id='barrel-dropdown'>
-                  <div class='dropdown-button'>BARREL
-                    <span class='triangle'>&#9660;</span>
-                  </div>
-                  <ul class='dropdown-selection'>
-                    <li>XRK ZODIAC S440</li>
-                    <li>XRK ZODIAC S440</li>
-                    <li>XRK ZODIAC S440</li>
-            
-                  </ul>
-                </div>
-            
-                <div class='dropdown' id='laser-dropdown'>
-                  <div class='dropdown-button'>LASER
-                    <span class='triangle'>&#9660;</span>
-                  </div>
-                  <ul class='dropdown-selection'>
-                    <li></li>
-                  </ul>
-                </div>
-            
-                <div class='dropdown' id='optic-dropdown'>
-                  <div class='dropdown-button'>OPTIC
-                    <span class='triangle'>&#9660;</span>
-                  </div>
-                  <ul class='dropdown-selection'>
-                    <li></li>
-                  </ul>
-                </div>
-            
-                <div class='dropdown' id='stock-dropdown'>
-                  <div class='dropdown-button'>STOCK
-                    <span class='triangle'>&#9660;</span>
-                  </div>
-                  <ul class='dropdown-selection'>
-                    <li></li>
-                  </ul>
-                </div>
-              </div>
-            
-              <div class="second-container">
-                <div class='dropdown' id='underbarrel-dropdown'>
-                  <div class='dropdown-button'>UNDERBARREL
-                    <span class='triangle'>&#9660;</span>
-                  </div>
-                  <ul class='dropdown-selection'>
-                    <li></li>
-                  </ul>
-                </div>
-            
-                <div class='dropdown' id='ammo-dropdown'>
-                  <div class='dropdown-button'>AMMUNITION
-                    <span class='triangle'>&#9660;</span>
-                  </div>
-                  <ul class='dropdown-selection'>
-                    <li></li>
-                  </ul>
-                </div>
-            
-                <div class='dropdown' id='reargrip-dropdown'>
-                  <div class='dropdown-button'>REAR GRIP
-                    <span class='triangle'>&#9660;</span>
-                  </div>
-                  <ul class='dropdown-selection'>
-                    <li></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- <div class="d3-svg-container" id="meta-vis"></div> -->
+            <div class="d3-svg-container" id="meta-vis"></div>
+
             <div class="weapon-summ" id="weapon-0-container">
+
               <div class="weapon-slides-wrapper" id="first-weapon">
                 <div class="weapon-img">
                   CR-56 AMAX
@@ -199,27 +121,31 @@
                         <td><span>Damage per Second</span></td>
                         <td>
                           <div class="damage-profile"><span>
-                            <span class="head-dmg">579</span>
-                            <span class="chest-dmg">| 434</span>
+                              <span class="head-dmg">579</span>
+                              <span class="chest-dmg">| 434</span>
                           </div>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+                <div class="all-dropdown-container">
+                  <div class='first-container'>
+                    <div class='dropdown' id='attach1-dropdown'>
+                      <div class='dropdown-button'>ATTACHMENTS TO USE
+                        <span class='triangle'>&#9660;</span>
+                      </div>
+                      <ul class='dropdown-selection'>
+                        <li>MONOLITHIC SUPPRESSOR</li>
+                        <li>XRK ZODIAC S440</li>
+                        <li>VLK 3.0X OPTIC</li>
+                        <li>COMMANDO FOREGRIP</li>
+                        <li>45 ROUND MAGS</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="radio">
-                <label class="radio-inline">
-                  <input type="radio" name="joined" value="base" onclick=`change(this.value)`> Base
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="joined" value="meta" onclick=`change(this.value)`> Meta
-                </label>
-                <label class="radio-inline">
-                  <input type="radio" name="joined" value="join" onclick=`change(this.value)` checked>
-                </label>
-              </div>
-              <div class="d3-svg-container" id="meta-vis"></div>
             </div>
 
             <div class="weapon-summ" id=weapon-1-container>
@@ -228,14 +154,16 @@
                   GRAU 5.56
                   <img src="https://meta-image.s3-us-west-1.amazonaws.com/grau.jpeg">
                   <div class="weapon-desc">
-                    "This modular 5.56 weapon platform is lightweight and maneuverable, with exceptional range. 
+                    "This modular 5.56 weapon platform is lightweight and maneuverable, with exceptional range.
                     Precision engineering and world class aftermarket barrels give this weapon extreme potential."
                   </div>
                 </div>
                 <div class="weapon-info-container">
                   <table class="base-info-table">
                     <thead class="table-title">
-                      <tr><th>BASE STATS</th></tr>
+                      <tr>
+                        <th>BASE STATS</th>
+                      </tr>
                     </thead>
                     <tbody class="weapon-contents">
                       <tr>
@@ -270,7 +198,9 @@
                       <tr>
                         <td><span>Base Range</span></td>
                         <td>
-                          <div class="damage-profile"><span>< 31m</span></div>
+                          <div class="damage-profile"><span>
+                              < 31m</span>
+                          </div>
                         </td>
                       </tr>
                       <tr>
@@ -284,6 +214,22 @@
                       </tr>
                     </tbody>
                   </table>
+                </div>
+                <div class="all-dropdown-container">
+                  <div class='first-container'>
+                    <div class='dropdown' id='attach2-dropdown'>
+                      <div class='dropdown-button'>ATTACHMENTS TO USE
+                        <span class='triangle'>&#9660;</span>
+                      </div>
+                      <ul class='dropdown-selection'>
+                        <li>MONOLITHIC SUPPRESSOR</li>
+                        <li>TEMPUS 26.4" ARCHANGEL</li>
+                        <li>VLK 3.0X OPTIC</li>
+                        <li>COMMANDO FOREGRIP</li>
+                        <li>60 ROUND MAGS</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -354,6 +300,22 @@
                     </tbody>
                   </table>
                 </div>
+                <div class="all-dropdown-container">
+                  <div class='first-container'>
+                    <div class='dropdown' id='attach3-dropdown'>
+                      <div class='dropdown-button'>ATTACHMENTS TO USE
+                        <span class='triangle'>&#9660;</span>
+                      </div>
+                      <ul class='dropdown-selection'>
+                        <li>MONOLITHIC INTEGRAL SUPPRESSOR</li>
+                        <li>5MW LASER</li>
+                        <li>STIPPLIED GRIP TAPE</li>
+                        <li>MERC FOREGRIP</li>
+                        <li>45 ROUND MAGS</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -363,7 +325,8 @@
                   FENNEC
                   <img src="https://meta-image.s3-us-west-1.amazonaws.com/fennec.jpeg">
                   <div class="weapon-desc">
-                    "An aggressive full auto submachine gun with buttery smooth recoil and a blazing fast rate of fire that is exceptional
+                    "An aggressive full auto submachine gun with buttery smooth recoil and a blazing fast rate of fire
+                    that is exceptional
                     for strategic room clearing and holding down the front line."
                   </div>
                 </div>
@@ -424,6 +387,22 @@
                     </tbody>
                   </table>
                 </div>
+                <div class="all-dropdown-container">
+                  <div class='first-container'>
+                    <div class='dropdown' id='attach4-dropdown'>
+                      <div class='dropdown-button'>ATTACHMENTS TO USE
+                        <span class='triangle'>&#9660;</span>
+                      </div>
+                      <ul class='dropdown-selection'>
+                        <li>ZLR 18" DEADFALL</li>
+                        <li>5MW LASER</li>
+                        <li>STIPPLIED GRIP TAPE</li>
+                        <li>MERC FOREGRIP</li>
+                        <li>40 ROUND DRUM</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -433,7 +412,7 @@
                   KAR 98K
                   <img src="https://meta-image.s3-us-west-1.amazonaws.com/kar.jpeg">
                   <div class="weapon-desc">
-                    "Bolt action rifle chambered in 7.92 Mauser. 
+                    "Bolt action rifle chambered in 7.92 Mauser.
                     A WW2 relic that is still extremely lethal in the hands of a rebel marksman."
                   </div>
                 </div>
@@ -494,6 +473,22 @@
                     </tbody>
                   </table>
                 </div>
+                <div class="all-dropdown-container">
+                  <div class='first-container'>
+                    <div class='dropdown' id='attach5-dropdown'>
+                      <div class='dropdown-button'>ATTACHMENTS TO USE
+                        <span class='triangle'>&#9660;</span>
+                      </div>
+                      <ul class='dropdown-selection'>
+                        <li>MONOLITHIC SUPPRESSOR</li>
+                        <li>SINGUARD CUSTOM 27.6"</li>
+                        <li>TAC LASER</li>
+                        <li>SNIPER SCOPE</li>
+                        <li>FTAC SPORT COMB</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -503,7 +498,7 @@
                   MAC-10
                   <img src="https://meta-image.s3-us-west-1.amazonaws.com/new_mac.png">
                   <div class="weapon-desc">
-                    "Full-auto submachine gun. Fastest fire rate in class with higher vertical recoil. 
+                    "Full-auto submachine gun. Fastest fire rate in class with higher vertical recoil.
                     Improved handling speeds with reduced damage."
                   </div>
                 </div>
@@ -564,6 +559,22 @@
                     </tbody>
                   </table>
                 </div>
+                <div class="all-dropdown-container">
+                  <div class='first-container'>
+                    <div class='dropdown' id='attach6-dropdown'>
+                      <div class='dropdown-button'>ATTACHMENTS TO USE
+                        <span class='triangle'>&#9660;</span>
+                      </div>
+                      <ul class='dropdown-selection'>
+                        <li>AGENCY SUPPRESSOR</li>
+                        <li>5.9" TASK FORCE</li>
+                        <li>FIELD AGENT GRIP</li>
+                        <li>RAIDER STOCK</li>
+                        <li>STANAG 53 RND DRUM</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -573,7 +584,8 @@
                   FFAR 1
                   <img src="https://meta-image.s3-us-west-1.amazonaws.com/ffar.gif">
                   <div class="weapon-desc">
-                    "Full-auto assault rifle. Fast fire rate with quick reloading speeds. Modest damage and slightly less ammo capacity."
+                    "Full-auto assault rifle. Fast fire rate with quick reloading speeds. Modest damage and slightly
+                    less ammo capacity."
                   </div>
                 </div>
                 <div class="weapon-info-container">
@@ -633,6 +645,22 @@
                     </tbody>
                   </table>
                 </div>
+                <div class="all-dropdown-container">
+                  <div class='first-container'>
+                    <div class='dropdown' id='attach7-dropdown'>
+                      <div class='dropdown-button'>ATTACHMENTS TO USE
+                        <span class='triangle'>&#9660;</span>
+                      </div>
+                      <ul class='dropdown-selection'>
+                        <li>AGENCY SUPPRESSOR</li>
+                        <li>21.2" RANGER</li>
+                        <li>FIELD AGENT GRIP</li>
+                        <li>RAIDER STOCK</li>
+                        <li>SALVO 50 RND FAST FAG</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -642,7 +670,7 @@
                   AUG
                   <img src="https://meta-image.s3-us-west-1.amazonaws.com/new_aug.png">
                   <div class="weapon-desc">
-                    "Burst fire tactical rifle. High damage with moderate recoil and slower movement speeds when firing. 
+                    "Burst fire tactical rifle. High damage with moderate recoil and slower movement speeds when firing.
                     Built in optic provides 1.5x magnification."
                   </div>
                 </div>
@@ -703,6 +731,22 @@
                     </tbody>
                   </table>
                 </div>
+                <div class="all-dropdown-container">
+                  <div class='first-container'>
+                    <div class='dropdown' id='attach8-dropdown'>
+                      <div class='dropdown-button'>ATTACHMENTS TO USE
+                        <span class='triangle'>&#9660;</span>
+                      </div>
+                      <ul class='dropdown-selection'>
+                        <li>AGENCY SILENCER</li>
+                        <li>18.2" STRIKE TEAM</li>
+                        <li>FIELD AGENT GRIP</li>
+                        <li>AXIAL ARMS 3X</li>
+                        <li>SALVO 53 RND FAST MAG</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -712,7 +756,8 @@
                   LW3 - TUNDRA
                   <img src="https://meta-image.s3-us-west-1.amazonaws.com/tundrapurple.gif">
                   <div class="weapon-desc">
-                    "Bolt-action sniper rifle. High damage with moderate sway. 1-shot kill to the head, upper-chest, and shoulders. 
+                    "Bolt-action sniper rifle. High damage with moderate sway. 1-shot kill to the head, upper-chest, and
+                    shoulders.
                     Hold L3 while ADS to steady."
                   </div>
                 </div>
@@ -773,6 +818,22 @@
                     </tbody>
                   </table>
                 </div>
+                <div class="all-dropdown-container">
+                  <div class='first-container'>
+                    <div class='dropdown' id='attach9-dropdown'>
+                      <div class='dropdown-button'>ATTACHMENTS TO USE
+                        <span class='triangle'>&#9660;</span>
+                      </div>
+                      <ul class='dropdown-selection'>
+                        <li>WRAPPED SUPPRESSOR</li>
+                        <li>29.1" COMBAT RECON</li>
+                        <li>BIPOD</li>
+                        <li>SAS COMBAT STOCK</li>
+                        <li>7 RND SPEED MAG</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -782,7 +843,7 @@
                   BULLFROG
                   <img src="https://meta-image.s3-us-west-1.amazonaws.com/bullfrog.gif">
                   <div class="weapon-desc">
-                    "Full-auto submachine gun. Reliable damage with improved range. 
+                    "Full-auto submachine gun. Reliable damage with improved range.
                     Large ammo pool and less accurate hipfire spread."
                   </div>
                 </div>
@@ -843,6 +904,22 @@
                     </tbody>
                   </table>
                 </div>
+                <div class="all-dropdown-container">
+                  <div class='first-container'>
+                    <div class='dropdown' id='attach10-dropdown'>
+                      <div class='dropdown-button'>ATTACHMENTS TO USE
+                        <span class='triangle'>&#9660;</span>
+                      </div>
+                      <ul class='dropdown-selection'>
+                        <li>GRU SUPPRESSOR</li>
+                        <li>7.4" TASK FORCE</li>
+                        <li>SPETSNAZ GRIP</li>
+                        <li>NO STOCK</li>
+                        <li>VDV 85 RND FAST MAG</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -852,7 +929,7 @@
                   STONER 63
                   <img src="https://meta-image.s3-us-west-1.amazonaws.com/stoner.gif">
                   <div class="weapon-desc">
-                    "Full-auto light machine gun. Improved fire rate with a larger ammo capacity. 
+                    "Full-auto light machine gun. Improved fire rate with a larger ammo capacity.
                     Subdued recoil and good visibility while firing."
                   </div>
                 </div>
@@ -913,11 +990,27 @@
                     </tbody>
                   </table>
                 </div>
+                <div class="all-dropdown-container">
+                  <div class='first-container'>
+                    <div class='dropdown' id='attach11-dropdown'>
+                      <div class='dropdown-button'>ATTACHMENTS TO USE
+                        <span class='triangle'>&#9660;</span>
+                      </div>
+                      <ul class='dropdown-selection'>
+                        <li>AGENCY SUPPRESSOR</li>
+                        <li>21.8" TASK FORCE</li>
+                        <li>FIELD AGENT GRIP</li>
+                        <li>NO STOCK</li>
+                        <li>SALVO 150 RND FAST MAG</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div class="weapon-summ" id="weapon-11-container">
-              <div class="weapon-slides-wrapper">
+              <div class="weapon-slides-wrapper" id="weapon-slides-12">
                 <div class="weapon-img">
                   GALLO SA12
                   <img src="https://meta-image.s3-us-west-1.amazonaws.com/gallo.gif">
@@ -982,7 +1075,23 @@
                     </tbody>
                   </table>
                 </div>
-              </div>  
+                <div class="all-dropdown-container">
+                  <div class='first-container'>
+                    <div class='dropdown' id='attach12-dropdown'>
+                      <div class='dropdown-button'>ATTACHMENTS TO USE
+                        <span class='triangle'>&#9660;</span>
+                      </div>
+                      <ul class='dropdown-selection'>
+                        <li>AGENCY CHOKE</li>
+                        <li>21.4" REINFORCED HEAVY</li>
+                        <li>SWAT 5MW LASER SIGHT</li>
+                        <li>NO STOCK</li>
+                        <li>STANAG 12 RND TUBE</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <ul class="side-navs"></ul>
@@ -992,4 +1101,5 @@
   </div>
   <script type="text/javascript" src="./dist/bundle.js"></script>
 </body>
+
 </html>

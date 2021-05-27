@@ -89,21 +89,69 @@
 }
 
 .slide-svg-8-rect {
-  fill: #1C3334;
+  fill: #5d9b9e;
 }
 
 .slide-svg-9-rect {
-  fill: #254E58;
+  fill: #0784a3;
 }
 
 .slide-svg-10-rect {
-  fill: #112D32;
+  fill: #7c969b;
 }
 
 .slide-svg-11-rect {
-  fill: #29648A;
+  fill: #15669c;
 }
 
-.radio {
-  z-index: 1;
-}
+.plot-rect:hover {
+  opacity: 75%;
+  transition: all 0.5s;
+  /*     animation-name: animateColor;
+    animation-duration: 0.5s; */ }
+
+@-webkit-keyframes animateColor {
+  from {
+    opacity: 100%; }
+  to {
+    opacity: 80%; } }
+
+@keyframes animateColor {
+  from {
+    opacity: 100%; }
+  to {
+    opacity: 80%; } }
+
+.hidden {
+  display: none; }
+
+.opaque {
+  opacity: 0%;
+  transition: all 0.5s; }
+
+.plot-rect {
+  transition: all 0.8s;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-name: animateHeight;
+  animation-name: animateHeight; }
+
+@-webkit-keyframes animateHeight {
+  from {
+    y: 450; }
+  to {
+    y: attr(y); }
+  from {
+    height: 0px; }
+  to {
+    height: attr(height); } }
+
+@keyframes animateHeight {
+  from {
+    y: 450; }
+  to {
+    y: attr(y); }
+  from {
+    height: 0px; }
+  to {
+    height: attr(height); } }
