@@ -1,18 +1,18 @@
 .side-navs {
   position: fixed;
   bottom: 0;
-  top: 173px;
-  right: 110px;
+  top: 90px;
+  right: 100px;
   background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 600px;
+  /* height: 600px; */
   z-index: 1;
 } 
 
 .side-nav-li {
-  height: 55px;
+  height: 6vh;
   width: 160px;
   border-radius: 0px;
   border-bottom: 1px solid #969696;
@@ -30,6 +30,8 @@
   background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/amax.jpeg");
   background-size: 10rem;
   background-repeat: no-repeat;
+  height: 55px;
+
 }
 
 .side-nav-li-1,
@@ -37,6 +39,8 @@
   background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/grau.jpeg");
   background-size: 10rem;
   background-repeat: no-repeat;
+  height: 50px;
+
 }
 
 .side-nav-li-2,
@@ -44,6 +48,8 @@
   background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/mp5.jpeg");
   background-size: 10rem;
   background-repeat: no-repeat;
+  height: 52px;
+
 }
 
 .side-nav-li-3,
@@ -51,7 +57,7 @@
   background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/fennec.jpeg");
   background-size: 10rem;
   background-repeat: no-repeat;
-  height: 70px;
+  height: 68px;
 }
 
 .side-nav-li-4,
@@ -75,6 +81,8 @@
   background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/ffar.gif");
   background-size: 10rem;
   background-repeat: no-repeat;
+  height: 55px;
+
 }
 
 .side-nav-li-7,
@@ -98,6 +106,8 @@
   background-image: url("https://meta-image.s3-us-west-1.amazonaws.com/bullfrog.gif");
   background-size: 10rem;
   background-repeat: no-repeat;
+  height: 55px;
+
 }
 
 .side-nav-li-10,
@@ -175,8 +185,8 @@
 
 #side-nav-li-4:after {
   content: "KAR 98K";
-  text-align: center;
-  width: 70px;
+  /* text-align: center; */
+  width: 75px;
   padding-top: 8px;
   color: #8e8268;
 }
@@ -224,7 +234,7 @@
 #side-nav-li-8:after {
   content: "LW3-TUNDRA";
   text-align: center;
-  color: #1C3334;
+  color: #5d9b9e;
 }
 
 .side-nav-li-8:after {
@@ -234,9 +244,9 @@
 
 #side-nav-li-9:after {
   content: "BULLFROG";
-  margin-left: -6px;
+  margin-left: -13px;
   padding-top: 16px;
-  color: #254E58;
+  color: #0784a3;
 }
 
 .side-nav-li-9:after {
@@ -245,11 +255,12 @@
 }
 
 #side-nav-li-10:after {
+  text-align: center;
   content: "STONER 63";
-  width: 93px;
+  width: 80px;
   margin-left: -6px;
-  padding-top: 15px; 
-  color: #112D32;
+  padding-top: 2px; 
+  color: #7c969b;
 }
 
 .side-nav-li-10:after {
@@ -261,10 +272,11 @@
   content: "GALLO SA12";
   text-align: center;
   padding-top: 5px;
-  color: #29648A;
+  color: #15669c;
 }
 
 .side-nav-li-11:after {
   opacity: 100%;
   position: absolute;
 }
+
