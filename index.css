@@ -131,3 +131,7 @@ tr {
 #weapon-slides-12 {
   margin-top: 145px;
 }
+
+.about-me-link:hover {
+  opacity: 80%;
+}
